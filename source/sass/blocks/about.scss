@@ -1,0 +1,44 @@
+.about {
+  position: relative;
+  display: grid;
+  grid-template-columns: 415fr 660fr;
+  gap: 85px;
+  padding-top: 120px;
+  padding-bottom: 234px;
+}
+
+.about__content {
+  padding-left: calc(6000% / 415);
+
+  h2 {
+    margin: 39px 0 0;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+    font-family: $ff-alumni-sans;
+    letter-spacing: 0.03em;
+  }
+
+  p {
+    margin: 7px 0 0;
+    font-weight: 300;
+
+    &:first-of-type {
+      margin-bottom: 40px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+}
+
+.about__picture {
+  align-self: end;
+  margin: 0;
+}
+
+.about__video {
+  position: absolute;
+  right: calc(40400% / 1250);
+  bottom: 119px;
+  width: calc(36400% / 1250);
+}

@@ -11,6 +11,7 @@
 @import "global/container";
 
 // Blocks
+@import "blocks/about";
 @import "blocks/accent-section";
 @import "blocks/btn";
 @import "blocks/heading";
@@ -18,6 +19,7 @@
 @import "blocks/page";
 @import "blocks/page-header";
 @import "blocks/promo";
+@import "blocks/video";
 
 // ❗ обязательно используйте миксины hover-focus и active для отключения ховеров на тач устройствах
 // адаптив пишем внутри каждого класса

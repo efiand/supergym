@@ -1,8 +1,10 @@
 import initLazy from './modules/init-lazy.js';
+import initVideo from './modules/video.js';
 
 window.addEventListener('load', () => {
   initLazy(() => {
     // сюда следует добавить скрипты, не участвующие в работе первого экрана
+    document.querySelectorAll('.video').forEach(initVideo);
   });
 });
 

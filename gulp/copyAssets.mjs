@@ -1,7 +1,7 @@
 import {isDev, dist} from './constants.js';
 import gulp from 'gulp';
 
-const SOURCES = ['source/**.html', 'source/fonts/**', 'source/img/**'];
+const SOURCES = ['source/**.html', 'source/{downloads,fonts,video}/**', 'source/img/**/*.{jpg,png,webp}', 'source/img/svg/**/*.svg'];
 const IMAGE_SOURCES = ['source/img/**/*.{png,jpg,webp}'];
 const PP_SOURCES = 'source/pixelperfect/**/*.{png,jpg,webp}';
 if (isDev) {
