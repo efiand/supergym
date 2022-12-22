@@ -6,14 +6,15 @@ $color-transparent: rgba($color-default-white, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/000000
 
-
 // Gradient
 
 // Shadow
 
 // Typography
 $fz-default: 16px;
-$ff-roboto-condensed: "Roboto Condensed";
+$ff-fallback: "Arial", "sans-serif";
+$ff-roboto-condensed: "Roboto Condensed", $ff-fallback;
+$ff-alumni-sans: "Alumni Sans", $ff-fallback;
 
 // Animation
 $tf-default: ease;
