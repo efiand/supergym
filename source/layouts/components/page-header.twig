@@ -1,0 +1,9 @@
+<div class="page-header {{ bemMix }}">
+	<header class="page-header__container container">
+		{% include 'logo.twig' with { bemMix: 'page-header__logo' } %}
+
+		<a class="page-header__link" href="{{ tel.url }}">{{ tel.title }}</a>
+	</header>
+
+	{% include 'promo.twig' with promo|merge({ bemMix: 'page-header__promo container' }) %}
+</div>

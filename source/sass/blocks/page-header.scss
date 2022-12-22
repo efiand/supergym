@@ -1,0 +1,35 @@
+.page-header {
+  padding: 30px 0 0;
+  color: $color-default-white;
+  background-color: $color-venetian-red;
+  background-image: conic-gradient(
+    from 130.31deg at 16.03% 39.06%,
+    $color-venetian-red -46.69deg,
+    $color-dark-cerulean 32.24deg,
+    $color-venetian-red 313.31deg,
+    $color-dark-cerulean 392.24deg
+  );
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  font-family: $ff-alumni-sans;
+  letter-spacing: 0.03em;
+}
+
+.page-header__logo {
+  margin-top: 10px;
+}
+
+.page-header__link {
+  @include default-interactive;
+}
+
+.page-header__promo {
+  margin-top: -63px;
+}

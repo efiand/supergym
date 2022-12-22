@@ -1,0 +1,10 @@
+<section class="accent-section">
+	<div class="container">
+		<h2 class="accent-section__heading heading">{{ heading }}</h2>
+		{{ content ?? ''}}
+
+		{% if component and data %}
+			{% include compotent ~ '.twig' with data|merge({ bemMix: 'accent-section__body' }) %}
+		{% endif %}
+	</div>
+</section>

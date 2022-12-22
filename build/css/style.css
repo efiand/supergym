@@ -639,6 +639,7 @@ html {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto Condensed", "Arial", "sans-serif";
+  color: #102654;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -762,11 +763,40 @@ input[type=number]::-webkit-inner-spin-button {
   padding: 0 45px;
 }
 
+.accent-section {
+  padding: 120px 0;
+  background-color: #f8f9fc;
+}
+
+.accent-section__heading {
+  margin: 0 0 25px;
+  text-align: center;
+}
+
+.accent-section__heading:only-child {
+  margin: 0;
+}
+
+.accent-section:nth-of-type(2n) {
+  margin-left: calc(50% - 650px);
+  padding: 146px 0 91px;
+}
+
+.accent-section:nth-of-type(2n) .accent-section__heading {
+  margin-bottom: 55px;
+}
+
 .btn {
-  font-family: inherit;
+  padding: 20px 32px 19px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: "Roboto Condensed", "Arial", "sans-serif";
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   text-align: center;
   overflow-wrap: anywhere;
-  border: none;
+  border: 2px solid;
   border-radius: 0;
   cursor: pointer;
   -webkit-user-select: none;
@@ -783,6 +813,145 @@ input[type=number]::-webkit-inner-spin-button {
   .btn.focus-visible:focus {
     opacity: 0.8;
   }
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  font-family: "Alumni Sans", "Arial", "sans-serif";
+  letter-spacing: 0.03em;
+}
+
+.logo {
+  transition: opacity 0.3s ease;
+}
+
+.logo:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .logo.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
+.page {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100vh;
+}
+
+.page-header {
+  padding: 30px 0 0;
+  color: #ffffff;
+  background-color: #b80027;
+  background-image: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  font-family: "Alumni Sans", "Arial", "sans-serif";
+  letter-spacing: 0.03em;
+}
+
+.page-header__logo {
+  margin-top: 10px;
+}
+
+.page-header__link {
+  transition: opacity 0.3s ease;
+}
+
+.page-header__link:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .page-header__link.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
+.page-header__promo {
+  margin-top: -63px;
+}
+
+.promo {
+  display: grid;
+  grid-template-rows: 1fr min-content min-content;
+  grid-template-columns: 133px 246px 1fr;
+  grid-template-areas: "features label image" "features heading image" "features btn image";
+  gap: 12px 16px;
+  min-height: 658px;
+  padding-top: 51px;
+  padding-bottom: 51px;
+}
+
+.promo__label,
+.promo__heading {
+  font-weight: 600;
+  font-family: "Alumni Sans", "Arial", "sans-serif";
+  text-transform: uppercase;
+}
+
+.promo__label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: label;
+  align-self: flex-end;
+  margin: 0 0 0 64px;
+  font-size: 40px;
+  line-height: 58px;
+  letter-spacing: 0.07em;
+  text-align: center;
+}
+
+.promo__heading {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: heading;
+  margin: 0 0 39px;
+  font-size: 92px;
+  line-height: 110px;
+  letter-spacing: 0.05em;
+  -webkit-text-stroke: 4px;
+  text-align: right;
+}
+
+.promo__features {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  grid-area: features;
+  align-self: center;
+  margin: 0;
+  padding: 117px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: right;
+}
+
+.promo__btn {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: btn;
+  margin: 0 0 45px 16px;
+  outline: 2px solid;
+}
+
+.promo__image {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 5;
+  grid-area: image;
+  margin: 0 0 0 49px;
 }
 
 @media (min-width: 768px) {
@@ -810,6 +979,28 @@ input[type=number]::-webkit-inner-spin-button {
   .btn:active,
   .btn:hover:active,
   .btn.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .logo:hover,
+  .logo:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .logo:active,
+  .logo:hover:active,
+  .logo.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .page-header__link:hover,
+  .page-header__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .page-header__link:active,
+  .page-header__link:hover:active,
+  .page-header__link.focus-visible:active {
     opacity: 0.5;
   }
 }

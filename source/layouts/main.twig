@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ projectName }}</title>
+		<title>{{ projectName }}{{ pageTitle ? ' &gt; ' ~ pageTitle }}</title>
 
 		<link rel="stylesheet" href="css/style.min.css{{ version }}">
 	</head>
@@ -13,16 +13,18 @@
 	<body>
 		<div class="page">
 			{% block header %}
+				<h1 class="visually-hidden">{{ projectName }}</h1>
+
+				{% include 'components/page-header.twig' with { bemMix: '' } %}
 			{% endblock %}
 
-			<main>
+			<main class="page__main">
 				{% block main %}{% endblock %}
 			</main>
 
-			{% block footer %}
-			{% endblock %}
-		</div>
+				{% block footer %}{% endblock %}
+			</div>
 
-		{% include 'modules/scripts.twig' %}
-	</body>
-</html>
+			{% include 'modules/scripts.twig' %}
+		</body>
+	</html>

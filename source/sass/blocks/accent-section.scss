@@ -1,0 +1,22 @@
+.accent-section {
+  padding: 120px 0;
+  background-color: $color-ghost-white;
+}
+
+.accent-section__heading {
+  margin: 0 0 25px;
+  text-align: center;
+
+  &:only-child {
+    margin: 0;
+  }
+}
+
+.accent-section:nth-of-type(2n) {
+  margin-left: calc(50% - 650px);
+  padding: 146px 0 91px;
+
+  .accent-section__heading {
+    margin-bottom: 55px;
+  }
+}

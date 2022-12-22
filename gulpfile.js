@@ -30,8 +30,8 @@ const syncServer = () => {
   gulp.watch(LintableFiles.STYLES, gulp.parallel(streamStyles, lintStyles));
   gulp.watch(LintableFiles.SCRIPTS, gulp.parallel(gulp.series(js, refresh), lintScripts));
   gulp.watch('source/img/**/*.svg', gulp.series(copySvg, sprite, refresh));
+  gulp.watch('source/img/**/*.{png,jpg}', createWebp);
   gulp.watch('source/img/**/*.{png,jpg,webp}', gulp.series(copyImages, refresh));
-
   gulp.watch('source/favicon/**', gulp.series(copyFavicons, refresh));
   gulp.watch('source/{downloads,fonts,video}/**', gulp.series(copy, refresh));
 };
