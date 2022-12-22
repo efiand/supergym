@@ -576,6 +576,14 @@ template {
 }
 
 @font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../fonts/robotocondensed-normal-300.woff2") format("woff2");
+}
+
+@font-face {
   font-weight: 400;
   font-style: normal;
   font-family: "Roboto Condensed";
@@ -761,6 +769,51 @@ input[type=number]::-webkit-inner-spin-button {
   margin-right: auto;
   margin-left: auto;
   padding: 0 45px;
+}
+
+.about {
+  position: relative;
+  display: grid;
+  grid-template-columns: 415fr 660fr;
+  gap: 85px;
+  padding-top: 120px;
+  padding-bottom: 234px;
+}
+
+.about__content {
+  padding-left: 14.4578313253%;
+}
+
+.about__content h2 {
+  margin: 39px 0 0;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 57px;
+  font-family: "Alumni Sans", "Arial", "sans-serif";
+  letter-spacing: 0.03em;
+}
+
+.about__content p {
+  margin: 7px 0 0;
+  font-weight: 300;
+}
+
+.about__content p:first-of-type {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.about__picture {
+  align-self: end;
+  margin: 0;
+}
+
+.about__video {
+  position: absolute;
+  right: 32.32%;
+  bottom: 119px;
+  width: 29.12%;
 }
 
 .accent-section {
@@ -954,6 +1007,111 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0 0 0 49px;
 }
 
+.video {
+  position: relative;
+  padding-top: 62.6373626374%;
+  background-color: #000000;
+  background-size: cover;
+}
+
+@supports (background-image: var(--bg-webp)) {
+@media (min-width: 1024px) {
+    .video {
+      background-image: var(--bg-webp);
+    }
+}
+
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
+    .video {
+      background-image: var(--bg-webp2x, none);
+    }
+}
+
+@media (max-width: 1023px) {
+    .video {
+      background-image: var(--bg-webpTablet, none);
+    }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .video {
+      background-image: var(--bg-webpTablet2x, none);
+    }
+}
+
+@media (max-width: 767px) {
+    .video {
+      background-image: var(--bg-webpMobile, none);
+    }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .video {
+      background-image: var(--bg-webpMobile2x, none);
+    }
+}
+}
+
+@supports not (background-image: var(--bg-webp, none)) {
+  .video {
+    background-image: var(--bg-default, none);
+  }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .video {
+      background-image: var(--bg-default2x, none);
+    }
+}
+}
+
+.video--active {
+  background-size: 0;
+}
+
+.video--active .video__player {
+  display: block;
+}
+
+.video--active .video__control {
+  display: none;
+}
+
+.video__player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+.video__control {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  background-image: url("../img/sprite.svg#play");
+  border: none;
+  border-radius: 50%;
+  outline-color: #ffffff;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.video__control:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .video__control.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
 @media (min-width: 768px) {
   .mobile-show {
     display: none;
@@ -967,6 +1125,10 @@ input[type=number]::-webkit-inner-spin-button {
 
   .container {
     padding: 0 15px;
+  }
+
+  .video {
+    padding-top: 52.1875%;
   }
 }
 
@@ -1001,6 +1163,17 @@ input[type=number]::-webkit-inner-spin-button {
   .page-header__link:active,
   .page-header__link:hover:active,
   .page-header__link.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .video__control:hover,
+  .video__control:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .video__control:active,
+  .video__control:hover:active,
+  .video__control.focus-visible:active {
     opacity: 0.5;
   }
 }

@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg"><style>:root svg:not(:target){display:none}</style><svg viewBox="0 0 20 20" fill="none" id="icon-close"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"></path></svg></svg>
+<svg xmlns="http://www.w3.org/2000/svg"><style>:root svg:not(:target){display:none}</style><svg viewBox="0 0 20 20" fill="none" id="icon-close"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"></path></svg><svg viewBox="0 0 100 100" fill="none" id="play">
+<circle cx="50" cy="50" r="49" stroke="url(#play_0)" stroke-opacity="0.2" stroke-width="2"></circle>
+<circle cx="50" cy="50" r="36" fill="url(#play_1)"></circle>
+<path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white"></path>
+<defs>
+<linearGradient id="play_0" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ED0233"></stop>
+<stop offset="1" stop-color="#003EB7"></stop>
+</linearGradient>
+<linearGradient id="play_1" x1="14" y1="49.52" x2="54.1858" y2="9.18415" gradientUnits="userSpaceOnUse">
+<stop stop-color="#003D85"></stop>
+<stop offset="0.885417" stop-color="#B80027"></stop>
+</linearGradient>
+</defs>
+</svg></svg>
