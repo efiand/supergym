@@ -829,11 +829,11 @@ input[type=number]::-webkit-inner-spin-button {
 .accent-section--decor::before {
   content: "";
   position: absolute;
-  right: -153px;
+  right: -103px;
   bottom: -150px;
   z-index: -1;
-  width: 440px;
-  height: 493px;
+  width: 470px;
+  height: 494px;
   background-size: cover;
 }
 
