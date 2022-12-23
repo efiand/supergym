@@ -1,10 +1,10 @@
-<section class="accent-section">
-	<div class="container">
-		<h2 class="accent-section__heading heading">{{ heading }}</h2>
+<section class="accent-section {{ alter ? 'accent-section--alter'}}" {{ decor ? background(decor) }}>
+	<div class="accent-section__inner {{ decor ? 'accent-section__inner--decor' }} container">
+		<h2 class="accent-section__heading heading">{{ data.heading }}</h2>
 		{{ content ?? ''}}
 
 		{% if component and data %}
-			{% include compotent ~ '.twig' with data|merge({ bemMix: 'accent-section__body' }) %}
+			{% include component ~ '.twig' with data|merge({ bemMix: 'accent-section__body' }) %}
 		{% endif %}
 	</div>
 </section>

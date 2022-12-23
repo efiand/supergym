@@ -2,4 +2,20 @@
 
 {% block main %}
 	{% include '../components/about.twig' with about %}
+
+	{% include '../components/accent-section.twig' with {
+		component: 'tabs',
+		decor: subscriptions.decor,
+		data: {
+			component: 'cards-list',
+			listComponent: 'card',
+			heading: subscriptions.heading,
+			tabs: subscriptions.groups
+		}
+	} %}
+
+	{% include '../components/accent-section.twig' with {
+		component: 'rates',
+		data: advantages
+	} %}
 {% endblock %}

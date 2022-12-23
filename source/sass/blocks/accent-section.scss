@@ -3,8 +3,28 @@
   background-color: $color-ghost-white;
 }
 
+.accent-section__inner {
+  &--decor {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -240px;
+      bottom: -270px;
+      z-index: -1;
+      width: 470px;
+      height: 494px;
+      background-size: cover;
+
+      @include background-image;
+    }
+  }
+}
+
 .accent-section__heading {
-  margin: 0 0 25px;
+  margin: 0;
   text-align: center;
 
   &:only-child {
@@ -12,9 +32,13 @@
   }
 }
 
-.accent-section:nth-of-type(2n) {
+.accent-section__body {
+  margin: 0;
+}
+
+.accent-section--alter {
   margin-left: calc(50% - 650px);
-  padding: 146px 0 91px;
+  padding: 146px calc(50% - 650px) 91px 0;
 
   .accent-section__heading {
     margin-bottom: 55px;

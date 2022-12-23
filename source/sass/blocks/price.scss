@@ -1,0 +1,20 @@
+.price {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.price__decor {
+  position: absolute;
+  z-index: -1;
+  bottom: -6px;
+  left: 50%;
+  font-size: 100px;
+  color: rgba($color-whisper, 0.48);
+  transform: translateX(-50%);
+}
+
+.price__value {
+  color: $color-egyptian-blue;
+}

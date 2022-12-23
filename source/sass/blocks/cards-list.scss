@@ -1,0 +1,11 @@
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-list__item {
+  background-color: $color-default-white;
+}

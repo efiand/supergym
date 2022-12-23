@@ -1,5 +1,10 @@
 {% extends '../main.twig' %}
 
 {% block main %}
-	{% include '../components/accent-section.twig' with { content, heading } %}
+	{% include '../components/accent-section.twig' with {
+		content,
+		data: {
+			heading: heading
+		}
+	} %}
 {% endblock %}

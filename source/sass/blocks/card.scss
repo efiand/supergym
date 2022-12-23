@@ -1,0 +1,42 @@
+.card {
+  padding: 50px 30px 60px;
+  text-align: center;
+  border: 7px solid transparent;
+
+  @include hover-focus(true) {
+    border-image: linear-gradient(148.82deg, $color-crimson 0.85%, $color-smalt 100%) 1;
+
+    .card__btn {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      color: $color-default-white;
+      background-image: linear-gradient(97.05deg, $color-torchred 17.6%, $color-cobalt 95.31%);
+      border: 1px solid $color-default-white;
+    }
+  }
+}
+
+.card__heading {
+  margin: 0 0 5px;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.card__description {
+  margin: 0 0 66px;
+  color: $color-chambray;
+}
+
+.card__price {
+  margin: 0 0 34px;
+}
+
+.card__btn {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+  max-width: 208px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  outline-offset: -4px;
+}
