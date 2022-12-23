@@ -4,6 +4,7 @@
 	{% include '../components/about.twig' with about %}
 
 	{% include '../components/accent-section.twig' with {
+		bemMix: 'page__subscriptions',
 		component: 'tabs',
 		decor: subscriptions.decor,
 		data: {
@@ -13,6 +14,10 @@
 			tabs: subscriptions.groups
 		}
 	} %}
+
+	{% include '../components/event.twig' with event|merge({
+		bemMix: 'page__event container'
+	}) %}
 
 	{% include '../components/accent-section.twig' with {
 		component: 'rates',

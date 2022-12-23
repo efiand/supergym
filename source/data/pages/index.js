@@ -61,16 +61,28 @@ export default ({getImages}) => ({
       },
     ],
   },
-  promo: {
+  event: {
+    description: html`<p>Ежегодные соревнования по CrossFit</p>`,
+    heading: 'Super Games',
+    datetime: {
+      day: 7,
+      month: 'Марта',
+      date: '2019-03-07',
+      time: '12:00',
+      year: 2019,
+    },
+    image: getImages('supergames', {alt: 'Пловец кролем в брызгах воды.'}, false, false),
+    link: {
+      title: 'Заполнить заявку',
+      url: '#!',
+    },
+  },
+  promo: addTariffLink({
     features: ['Тренажёрный зал', 'Групповые занятия', 'Кардио-зона'],
     label: 'Омск',
-    link: {
-      title: 'Купить абонемент',
-      utl: '#!',
-    },
     image: getImages('promo', {alt: 'Каким Вы можете стать благодаря нам.'}, false, false),
     title: 'Фитнес центр',
-  },
+  }),
   subscriptions: {
     decor: getImages('wheels', {}, false, false),
     heading: 'Абонементы',

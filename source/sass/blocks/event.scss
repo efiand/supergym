@@ -1,0 +1,48 @@
+.event {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: center;
+}
+
+.event__content {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 9px 50px;
+  align-self: start;
+  padding: 80px 78px 87px;
+  color: $color-default-white;
+  background-color: $color-torchred;
+}
+
+.event__heading {
+  margin: 5px 0 0;
+  overflow-wrap: anywhere;
+  font-weight: 600;
+  font-size: 82px;
+  line-height: 0.96;
+  font-family: $ff-alumni-sans;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.event__datetime {
+  margin: 0;
+}
+
+.event__description {
+  grid-column: 1 / -1;
+  margin-bottom: 39px;
+
+  p {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+.event__btn {
+  grid-column: 1 / -1;
+  outline: 2px solid;
+  padding-top: 25px;
+  padding-bottom: 24px;
+}

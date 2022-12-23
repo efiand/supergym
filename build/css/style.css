@@ -994,6 +994,55 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: #ffffff;
 }
 
+.event {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: center;
+}
+
+.event__content {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 9px 50px;
+  align-self: start;
+  padding: 80px 78px 87px;
+  color: #ffffff;
+  background-color: #ed0233;
+}
+
+.event__heading {
+  margin: 5px 0 0;
+  overflow-wrap: anywhere;
+  font-weight: 600;
+  font-size: 82px;
+  line-height: 0.96;
+  font-family: "Alumni Sans", "Arial", "sans-serif";
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.event__datetime {
+  margin: 0;
+}
+
+.event__description {
+  grid-column: 1/-1;
+  margin-bottom: 39px;
+}
+
+.event__description p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.event__btn {
+  grid-column: 1/-1;
+  outline: 2px solid;
+  padding-top: 25px;
+  padding-bottom: 24px;
+}
+
 .heading {
   font-weight: 600;
   font-size: 54px;
@@ -1021,6 +1070,14 @@ input[type=number]::-webkit-inner-spin-button {
   grid-template-rows: min-content 1fr min-content;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+.page__subscriptions {
+  margin-bottom: 120px;
+}
+
+.page__event {
+  margin-bottom: 106px;
 }
 
 .page-header {
@@ -1062,6 +1119,47 @@ input[type=number]::-webkit-inner-spin-button {
 
 .page-header__promo {
   margin-top: -63px;
+}
+
+.params-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.params-list__key {
+  font-size: 18px;
+}
+
+.params-list__value {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.params-list__value::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 96%;
+  min-width: 64px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.params-list__value:last-child {
+  margin-bottom: 0;
+}
+
+.params-list__additions {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .price {
