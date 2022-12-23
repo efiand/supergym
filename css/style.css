@@ -821,16 +821,16 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: #f8f9fc;
 }
 
-.accent-section--decor {
+.accent-section__inner--decor {
   position: relative;
   z-index: 1;
 }
 
-.accent-section--decor::before {
+.accent-section__inner--decor::before {
   content: "";
   position: absolute;
-  right: -103px;
-  bottom: -150px;
+  right: -240px;
+  bottom: -270px;
   z-index: -1;
   width: 470px;
   height: 494px;
@@ -839,49 +839,49 @@ input[type=number]::-webkit-inner-spin-button {
 
 @supports (background-image: var(--bg-webp)) {
 @media (min-width: 1024px) {
-    .accent-section--decor::before {
+    .accent-section__inner--decor::before {
       background-image: var(--bg-webp);
     }
 }
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
-    .accent-section--decor::before {
+    .accent-section__inner--decor::before {
       background-image: var(--bg-webp2x, none);
     }
 }
 
 @media (max-width: 1023px) {
-    .accent-section--decor::before {
+    .accent-section__inner--decor::before {
       background-image: var(--bg-webpTablet, none);
     }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-    .accent-section--decor::before {
+    .accent-section__inner--decor::before {
       background-image: var(--bg-webpTablet2x, none);
     }
 }
 
 @media (max-width: 767px) {
-    .accent-section--decor::before {
+    .accent-section__inner--decor::before {
       background-image: var(--bg-webpMobile, none);
     }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .accent-section--decor::before {
+    .accent-section__inner--decor::before {
       background-image: var(--bg-webpMobile2x, none);
     }
 }
 }
 
 @supports not (background-image: var(--bg-webp, none)) {
-  .accent-section--decor::before {
+  .accent-section__inner--decor::before {
     background-image: var(--bg-default, none);
   }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .accent-section--decor::before {
+    .accent-section__inner--decor::before {
       background-image: var(--bg-default2x, none);
     }
 }
@@ -939,7 +939,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .card {
-  padding: 50px 69px 60px;
+  padding: 50px 30px 60px;
   text-align: center;
   border: 7px solid transparent;
 }
@@ -973,7 +973,10 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .card__btn {
-  display: block;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+  max-width: 208px;
   padding-top: 24px;
   padding-bottom: 24px;
   outline-offset: -4px;
@@ -981,7 +984,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .cards-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 360px);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding: 0;
   list-style: none;
@@ -1017,6 +1020,7 @@ input[type=number]::-webkit-inner-spin-button {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .page-header {
@@ -1027,6 +1031,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .page-header__container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 30px;
