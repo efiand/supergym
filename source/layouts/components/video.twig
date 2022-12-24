@@ -1,11 +1,11 @@
-<div class="video video--active" {{ background(poster) }}>
-	<video class="video__player" poster="{{ poster.default }}" controls>
+<div class="video video--active" {{ background(poster) }} data-video>
+	<video class="video__player" poster="{{ poster.default }}" controls data-player>
 		<source src="video/{{ file }}.m4v">
 		<source src="video/{{ file }}.ogv" type="video/ogg">
 		<source src="video/{{ file }}.webm" type="video/webm">
 	</video>
 
-	<button class="video__control" type="button">
+	<button class="video__control" type="button" data-control>
 		<span class="visually-hidden">Проиграть видео.</span>
 	</button>
 </div>

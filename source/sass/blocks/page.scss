@@ -5,10 +5,41 @@
   overflow-x: hidden;
 }
 
+.page__heading {
+  margin: 0 0 48px;
+
+  @include vp-1249 {
+    text-align: center;
+  }
+}
+
 .page__subscriptions {
   margin-bottom: 120px;
 }
 
 .page__event {
   margin-bottom: 106px;
+}
+
+.page__trainers {
+  margin-bottom: 91px;
+}
+
+.page__slider {
+  width: 560px;
+  margin: 0 auto;
+
+  &--wide {
+    width: calc(100% + 120px);
+    margin: 0 0 0 -60px;
+
+    @include vp-1249 {
+      width: 980px;
+      margin: 0 auto;
+    }
+
+    @include vp-1099 {
+      width: 680px;
+    }
+  }
 }

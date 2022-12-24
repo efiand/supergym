@@ -19,6 +19,16 @@
 		bemMix: 'page__event container'
 	}) %}
 
+	<section class="page__trainers container">
+		<h2 class="page__heading heading">{{ trainers.heading }}</h2>
+		{% include '../components/slider.twig' with {
+			bemMix: 'page__slider page__slider--wide',
+			component: 'figure',
+			multiple: true,
+			slides: trainers.list
+		} %}
+	</section>
+
 	{% include '../components/accent-section.twig' with {
 		component: 'rates',
 		data: advantages
