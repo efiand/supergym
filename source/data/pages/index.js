@@ -122,10 +122,10 @@ export default ({getImages}) => {
         url: '#!',
       },
     },
-    promo: addTariffLink({
+    teaser: addTariffLink({
       features: ['Тренажёрный зал', 'Групповые занятия', 'Кардио-зона'],
       label: 'Омск',
-      image: getImages('promo', {alt: 'Каким Вы можете стать благодаря нам.'}, false, false),
+      image: getImages('teaser', {alt: 'Каким Вы можете стать благодаря нам.'}, false, false),
       title: 'Фитнес центр',
     }),
     subscriptions: {
