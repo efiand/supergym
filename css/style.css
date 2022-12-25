@@ -1350,7 +1350,6 @@ input[type=number]::-webkit-inner-spin-button {
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .review__author {
