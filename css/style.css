@@ -1391,6 +1391,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .slider__item {
   flex-shrink: 0;
+  max-width: 100%;
 }
 
 .slider__item--card {
@@ -1456,9 +1457,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 .slider.no-js .slider__list {
   flex-wrap: wrap;
-}
-
-.slider.no-js .slider__list--gapped {
   gap: 40px;
 }
 
