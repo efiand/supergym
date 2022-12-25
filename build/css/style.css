@@ -722,6 +722,8 @@ input[type=number]::-webkit-inner-spin-button {
   text-transform: uppercase;
   text-align: center;
   overflow-wrap: anywhere;
+  color: inherit;
+  background-color: transparent;
   border: 2px solid;
   border-radius: 0;
   cursor: pointer;
@@ -803,18 +805,16 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .content-group__heading {
-  margin: 0 0 42px;
+  margin: 0 0 36px;
 }
 
 .content-group__item {
-  padding: 55px calc(100% - 580px) 55px 120px;
+  padding: 55px calc(100% - 580px) 65px 120px;
   border-top: 1px solid #74819c;
 }
 
 .content-group__item:nth-child(4n),
 .content-group__item:nth-child(4n+1) {
-  padding-right: 120px;
-  padding-left: calc(100% - 580px);
   color: #ffffff;
   background-color: #102654;
   border-color: transparent;
@@ -822,9 +822,46 @@ input[type=number]::-webkit-inner-spin-button {
 
 .content-group__item:nth-child(4n) .content-group__heading,
 .content-group__item:nth-child(4n+1) .content-group__heading {
-  margin-bottom: 24px;
+  margin-bottom: 15px;
   font-weight: 800;
   line-height: 1.56;
+}
+
+.content-group__item:nth-child(2n+1) {
+  padding-right: 170px;
+  padding-left: calc(100% - 580px);
+}
+
+.content-group__content {
+  margin: 0;
+}
+
+.dict {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px 120px;
+}
+
+.dict::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  bottom: 6px;
+  left: 50%;
+  width: 1px;
+  background-color: #74819c;
+  transform: translateX(-50%);
+}
+
+.dict__key {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.dict__value {
+  margin: 0;
+  font-size: 14px;
 }
 
 .event {
@@ -992,6 +1029,50 @@ input[type=number]::-webkit-inner-spin-button {
   border-radius: 50%;
 }
 
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 30px;
+}
+
+.form__group {
+  margin: 0;
+}
+
+.form__group label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.form__group input {
+  width: 100%;
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #74819c;
+  outline-offset: -1px;
+}
+
+.form__submit {
+  grid-column: 1/-1;
+  padding: 16px 32px;
+  font-size: 14px;
+  line-height: 16px;
+  outline: 1px solid;
+}
+
 .heading {
   font-weight: 600;
   font-size: 54px;
@@ -1010,6 +1091,30 @@ input[type=number]::-webkit-inner-spin-button {
 
 @supports not selector(:focus-visible) {
   .logo.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 41px;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  font-size: 14px;
+  line-height: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.nav__link:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .nav__link.focus-visible:focus {
     opacity: 0.8;
   }
 }
@@ -1105,6 +1210,36 @@ input[type=number]::-webkit-inner-spin-button {
 
 .page-header__teaser {
   margin-top: -63px;
+}
+
+.page-footer {
+  padding: 40px 0;
+  color: #ffffff;
+  background-color: #030a1a;
+}
+
+.page-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.page-footer__logo {
+  flex-shrink: 0;
+  width: 86px;
+  margin-top: 11px;
+}
+
+.page-footer__nav {
+  justify-content: center;
+  margin: 0 0 0 11px;
+}
+
+.page-footer__socials {
+  justify-content: flex-end;
+  min-width: 100px;
+  margin: 0;
 }
 
 .params-list {
@@ -1497,6 +1632,58 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__item {
+  flex-shrink: 0;
+}
+
+.socials__link {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+}
+
+.socials__link:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .socials__link.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
+.socials__link::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #030a1a;
+}
+
+.socials__link--vk::before {
+  -webkit-mask: url("../img/sprite.svg#vk") no-repeat center/100%;
+  mask: url("../img/sprite.svg#vk") no-repeat center/100%;
+}
+
+.socials__link--ok::before {
+  -webkit-mask: url("../img/sprite.svg#ok") no-repeat center/100%;
+  mask: url("../img/sprite.svg#ok") no-repeat center/100%;
+}
+
+.socials__link--reddit::before {
+  -webkit-mask: url("../img/sprite.svg#reddit") no-repeat center/100%;
+  mask: url("../img/sprite.svg#reddit") no-repeat center/100%;
+}
+
 .tabs {
   display: flex;
   flex-direction: column;
@@ -1761,10 +1948,22 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 
-@media (max-width: 1249px) {
+@media (max-width: 1299px) {
   .accent-section--alter {
     margin-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 1249px) {
+  .content-group__item {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .content-group__item:nth-child(2n+1) {
+    padding-right: 60px;
+    padding-left: 60px;
   }
 
   .page__heading--alter {
@@ -1884,6 +2083,17 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 0.5;
   }
 
+  .nav__link:hover,
+  .nav__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .nav__link:active,
+  .nav__link:hover:active,
+  .nav__link.focus-visible:active {
+    opacity: 0.5;
+  }
+
   .page-header__link:hover,
   .page-header__link:hover:not(.focus-visible) {
     opacity: 0.8;
@@ -1914,6 +2124,17 @@ input[type=number]::-webkit-inner-spin-button {
   .slider__control:active,
   .slider__control:hover:active,
   .slider__control.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .socials__link:hover,
+  .socials__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .socials__link:active,
+  .socials__link:hover:active,
+  .socials__link.focus-visible:active {
     opacity: 0.5;
   }
 

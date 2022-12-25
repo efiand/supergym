@@ -37,10 +37,10 @@
 }
 
 .accent-section--alter {
-  margin-left: calc(50% - 650px);
-  padding: 146px calc(50% - 650px) 75px 0;
+  margin-left: $offset-fluid;
+  padding: 146px $offset-fluid 75px 0;
 
-  @include vp-1249 {
+  @include vp-1299 {
     margin-left: 0;
     padding-right: 0;
   }

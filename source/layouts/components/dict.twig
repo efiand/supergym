@@ -1,0 +1,8 @@
+<dl class="dict {{ bemMix }}">
+	{% for term in list %}
+		<div>
+			<dt class="dict__key">{{ term.key }}</dt>
+			<dd class="dict__value">{{ term.value }}</dd>
+		</div>
+	{% endfor %}
+</dl>

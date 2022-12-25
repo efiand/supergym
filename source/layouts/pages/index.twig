@@ -51,4 +51,9 @@
 			shadow: true
 		} %}
 	</section>
+
+	{% include '../components/content-group.twig' with { data: [
+		ticket|merge({ component: 'form' }),
+		contacts|merge({ component: 'dict' })
+	] } %}
 {% endblock %}

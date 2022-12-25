@@ -8,7 +8,7 @@ const addTariffLink = (tariff) =>
     },
   });
 
-export default ({getImages}) => {
+export default ({getImages, tel}) => {
   const trainersList = [
     {
       content: html`<ul>
@@ -106,6 +106,15 @@ export default ({getImages}) => {
         },
       ],
     },
+    contacts: {
+      heading: 'Контакты',
+      list: [
+        ['Адрес:', 'г. Омск, ул. 60 лет Октября, 7'],
+        ['Телефон:', html`<a href="${tel.url}">${tel.title}</a>`],
+        ['График работы:', 'Пн-Вс: с 8:00 до 22:00'],
+        ['Email:', html`<a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>`],
+      ].map(([key, value]) => ({key, value})),
+    },
     event: {
       description: html`<p>Ежегодные соревнования по CrossFit</p>`,
       heading: 'Super Games',
@@ -158,12 +167,6 @@ export default ({getImages}) => {
         image: getImages('avatar', {alt: 'Фото пользователя.'}, false, false),
       })),
     },
-    teaser: addTariffLink({
-      features: ['Тренажёрный зал', 'Групповые занятия', 'Кардио-зона'],
-      label: 'Омск',
-      image: getImages('teaser', {alt: 'Каким Вы можете стать благодаря нам.'}, false, false),
-      title: 'Фитнес центр',
-    }),
     subscriptions: {
       decor: getImages('wheels', {}, false, false),
       heading: 'Абонементы',
@@ -230,6 +233,37 @@ export default ({getImages}) => {
         },
       ],
     },
+    ticket: {
+      action: 'https://echo.htmlacademy.ru',
+
+      fields: [
+        html`<input
+            id="ticket-name"
+            name="name"
+            type="text"
+            placeholder="Имя"
+            pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
+            required
+          />
+          <label for="ticket-name">Имя.</label>`,
+        html`<input
+            id="ticket-phone"
+            name="phone"
+            type="tel"
+            placeholder="Телефон"
+            pattern="^\\+?[\\d ()-]+$"
+            required
+          />
+          <label for="ticket-phone">Телефон.</label>`,
+      ],
+      heading: 'Бесплатное занятие',
+    },
+    teaser: addTariffLink({
+      features: ['Тренажёрный зал', 'Групповые занятия', 'Кардио-зона'],
+      label: 'Омск',
+      image: getImages('teaser', {alt: 'Каким Вы можете стать благодаря нам.'}, false, false),
+      title: 'Фитнес центр',
+    }),
     trainers: {
       heading: 'Тренеры',
       list: trainersList,
