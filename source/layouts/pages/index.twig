@@ -31,7 +31,12 @@
 
 	{% include '../components/accent-section.twig' with {
 		alter: true,
+		bemMix: 'page__advantages',
 		component: 'rates',
 		data: advantages
 	} %}
+
+	{% include '../components/promo.twig' with promo|merge({
+		bemMix: 'page__promo container'
+	}) %}
 {% endblock %}

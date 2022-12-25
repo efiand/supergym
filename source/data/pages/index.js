@@ -122,6 +122,31 @@ export default ({getImages}) => {
         url: '#!',
       },
     },
+    promo: {
+      heading: 'Акции',
+      list: [
+        {
+          content: html`<h3>Год <strong>4999</strong></h3>
+            <p>Безлимитный абонемент в тренажерный зал</p>`,
+          image: getImages('promo', {alt: 'Спортсменка на фоне голубого неба.'}),
+        },
+        {
+          content: html`<h3>Месяц бесплатно</h3>
+            <p>Приведи друга, получи абонемент в подарок</p>`,
+        },
+        {
+          content: html`<h3>Скидка 20%</h3>
+            <p>Корпоративный фитнес с командой</p>`,
+        },
+      ].map((item) =>
+        Object.assign(item, {
+          link: {
+            title: 'Подробнее',
+            url: '#!',
+          },
+        })
+      ),
+    },
     teaser: addTariffLink({
       features: ['Тренажёрный зал', 'Групповые занятия', 'Кардио-зона'],
       label: 'Омск',

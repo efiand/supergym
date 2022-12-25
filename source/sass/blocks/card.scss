@@ -4,7 +4,7 @@
   border: 7px solid transparent;
 
   @include hover-focus(true) {
-    border-image: linear-gradient(148.82deg, $color-crimson 0.85%, $color-smalt 100%) 1;
+    border-image: $border-image;
 
     .card__btn {
       padding-top: 25px;
