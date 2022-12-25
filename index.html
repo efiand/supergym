@@ -512,7 +512,7 @@
         </ul>
       </section>
 
-      <section class="page__trainers container">
+      <section class="page__reviews container">
         <h2 class="page__heading heading">Отзывы</h2>
         <div class="slider no-js page__slider" data-slider="">
           <div class="slider__body slider__body--shadow" data-slider-body="">
@@ -584,6 +584,45 @@
           </button>
         </div>
       </section>
+      <div class="content-group">
+
+        <section class="content-group__item">
+          <h2 class="content-group__heading heading">Бесплатное занятие</h2>
+          <form class="form content-group__content" action="https://echo.htmlacademy.ru" method="get">
+            <p class="form__group">
+              <input id="ticket-name" name="name" type="text" placeholder="Имя" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required="">
+              <label for="ticket-name">Имя.</label>
+            </p>
+            <p class="form__group">
+              <input id="ticket-phone" name="phone" type="tel" placeholder="Телефон" pattern="^\+?[\d ()-]+$" required="">
+              <label for="ticket-phone">Телефон.</label>
+            </p>
+            <button class="form__submit btn" type="submit">Отправить</button>
+          </form>
+        </section>
+
+        <section class="content-group__item">
+          <h2 class="content-group__heading heading">Контакты</h2>
+          <dl class="dict content-group__content">
+            <div>
+              <dt class="dict__key">Адрес:</dt>
+              <dd class="dict__value">г. Омск, ул.&nbsp;60 лет Октября, 7</dd>
+            </div>
+            <div>
+              <dt class="dict__key">Телефон:</dt>
+              <dd class="dict__value"><a href="tel:+78005555555">8-800-555-55-55</a></dd>
+            </div>
+            <div>
+              <dt class="dict__key">График работы:</dt>
+              <dd class="dict__value">Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</dd>
+            </div>
+            <div>
+              <dt class="dict__key">Email:</dt>
+              <dd class="dict__value"><a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></dd>
+            </div>
+          </dl>
+        </section>
+      </div>
     </main>
   </div>
   <script src="js/vendor.min.js"></script>
