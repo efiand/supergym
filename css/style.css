@@ -815,8 +815,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 .content-group__item:nth-child(4n),
 .content-group__item:nth-child(4n+1) {
-  padding-right: 170px;
-  padding-left: calc(100% - 580px);
   color: #ffffff;
   background-color: #102654;
   border-color: transparent;
@@ -827,6 +825,11 @@ input[type=number]::-webkit-inner-spin-button {
   margin-bottom: 15px;
   font-weight: 800;
   line-height: 1.56;
+}
+
+.content-group__item:nth-child(2n+1) {
+  padding-right: 170px;
+  padding-left: calc(100% - 580px);
 }
 
 .content-group__content {
