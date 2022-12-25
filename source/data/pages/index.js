@@ -147,6 +147,17 @@ export default ({getImages}) => {
         })
       ),
     },
+    reviews: {
+      heading: 'Отзывы',
+      list: Array.from({length: 3}, () => ({
+        author: 'Анна Орлова',
+        content: html`<p>
+          «Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
+          дружелюбный. Зал просторный, даже в вечернее время нет очередей»
+        </p>`,
+        image: getImages('avatar', {alt: 'Фото пользователя.'}, false, false),
+      })),
+    },
     teaser: addTariffLink({
       features: ['Тренажёрный зал', 'Групповые занятия', 'Кардио-зона'],
       label: 'Омск',

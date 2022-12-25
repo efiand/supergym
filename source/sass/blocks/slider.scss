@@ -6,6 +6,10 @@
 
 .slider__body {
   overflow: hidden;
+
+  &--shadow {
+    box-shadow: 0 0 40px rgba($color-resolution-blue, 0.2);
+  }
 }
 
 .slider__list {
@@ -18,6 +22,7 @@
 
 .slider__item {
   flex-shrink: 0;
+  max-width: 100%;
 
   &--card {
     width: 260px;
@@ -75,10 +80,7 @@
 .slider.no-js {
   .slider__list {
     flex-wrap: wrap;
-
-    &--gapped {
-      gap: 40px;
-    }
+    gap: 40px;
   }
 
   .slider__control {

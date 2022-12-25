@@ -20,7 +20,8 @@
 	}) %}
 
 	<section class="page__trainers container">
-		<h2 class="page__heading heading">{{ trainers.heading }}</h2>
+		<h2 class="page__heading page__heading--alter heading">{{ trainers.heading }}</h2>
+
 		{% include '../components/slider.twig' with {
 			bemMix: 'page__slider page__slider--wide',
 			component: 'figure',
@@ -39,4 +40,15 @@
 	{% include '../components/promo.twig' with promo|merge({
 		bemMix: 'page__promo container'
 	}) %}
+
+	<section class="page__reviews container">
+		<h2 class="page__heading heading">{{ reviews.heading }}</h2>
+
+		{% include '../components/slider.twig' with {
+			bemMix: 'page__slider',
+			component: 'review',
+			slides: reviews.list,
+			shadow: true
+		} %}
+	</section>
 {% endblock %}

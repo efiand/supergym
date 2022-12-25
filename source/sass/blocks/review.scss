@@ -1,0 +1,35 @@
+.review {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-content: start;
+  gap: 11px 28px;
+  padding: 54px 62px 55px;
+  color: $color-default-white;
+  background-color: $color-resolution-blue;
+}
+
+.review__picture {
+  grid-row: span 2;
+  margin: 8px 0 0;
+}
+
+.review__image {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.review__author {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.review__content {
+  line-height: 23px;
+
+  p {
+    margin: 0;
+  }
+}

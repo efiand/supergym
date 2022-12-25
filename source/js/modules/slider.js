@@ -1,5 +1,5 @@
 export default (sliderElement) => {
-  const isMultiple = sliderElement.dataset.multiple !== 'undefined';
+  const isMultiple = typeof sliderElement.dataset.multiple !== 'undefined';
 
   const sliderOptions = {
     loop: true,
