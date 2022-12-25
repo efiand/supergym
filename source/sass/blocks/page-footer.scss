@@ -1,0 +1,29 @@
+.page-footer {
+  padding: 40px 0;
+  color: $color-default-white;
+  background-color: $color-black-russian;
+}
+
+.page-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.page-footer__logo {
+  flex-shrink: 0;
+  width: 86px;
+  margin-top: 11px;
+}
+
+.page-footer__nav {
+  justify-content: center;
+  margin: 0 0 0 11px;
+}
+
+.page-footer__socials {
+  justify-content: flex-end;
+  min-width: 100px;
+  margin: 0;
+}
