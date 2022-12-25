@@ -1,15 +1,10 @@
-const scrolledToContent = (scrolledElement) => scrolledElement.scrollTop > window.innerHeight;
+const scrolledToContent = (scrolledElement) => scrolledElement.scrollTop > window.innerHeight / 10;
 
-const scrollHandler = () => {
-  if (!scrolledToContent()) {
-    return;
+function initLazy(callback, scrolledElement, scrollHandler) {
+  if (scrollHandler) {
+    document.removeEventListener('scroll', scrollHandler);
   }
 
-  initLazy();
-};
-
-function initLazy(callback, scrolledElement) {
-  scrolledElement.removeEventListener('scroll', scrollHandler);
   scrolledElement.querySelectorAll('[data-lazy-style]').forEach((lazyStyledElement) => {
     lazyStyledElement.setAttribute('style', lazyStyledElement.dataset.lazyStyle);
     lazyStyledElement.removeAttribute('data-lazy-style');
@@ -20,9 +15,17 @@ function initLazy(callback, scrolledElement) {
 
 export default (callback, scrolledElement = document.documentElement) => {
   // Загрузка скриптов второго и последующих экранов
-  if (window.isDev || scrolledToContent(scrolledElement)) {
+  if (scrolledToContent(scrolledElement)) {
     initLazy(callback, scrolledElement);
   } else {
-    scrolledElement.addEventListener('scroll', scrollHandler);
+    const scrollHandler = () => {
+      if (!scrolledToContent(scrolledElement)) {
+        return;
+      }
+
+      initLazy(callback, scrolledElement, scrollHandler);
+    };
+
+    document.addEventListener('scroll', scrollHandler);
   }
 };

@@ -807,14 +807,14 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .content-group__item {
-  padding: 55px calc(100% - 650px) 55px 120px;
+  padding: 55px calc(100% - 580px) 55px 120px;
   border-top: 1px solid #74819c;
 }
 
 .content-group__item:nth-child(4n),
 .content-group__item:nth-child(4n+1) {
   padding-right: 120px;
-  padding-left: calc(100% - 650px);
+  padding-left: calc(100% - 580px);
   color: #ffffff;
   background-color: #102654;
   border-color: transparent;
