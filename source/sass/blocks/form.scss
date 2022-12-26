@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px 30px;
+
+  @include vp-1023 {
+    column-gap: 60px;
+  }
 }
 
 .form__group {

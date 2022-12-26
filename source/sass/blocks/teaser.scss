@@ -7,23 +7,38 @@
   min-height: 658px;
   padding-top: 51px;
   padding-bottom: 51px;
+
+  @include vp-1023 {
+    grid-template-columns: 113px 187px 1fr;
+    gap: 12px 24px;
+    min-height: auto;
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
 }
 
 .teaser__label,
 .teaser__heading {
   font-weight: 600;
   font-family: $ff-alumni-sans;
-  text-transform: uppercase;
 }
 
 .teaser__label {
   grid-area: label;
-  align-self: flex-end;
+  align-self: end;
   margin: 0 0 0 64px;
   font-size: 40px;
   line-height: 58px;
   letter-spacing: 0.07em;
   text-align: center;
+  text-transform: uppercase;
+
+  @include vp-1023 {
+    margin: 0 5px 0 0;
+    font-size: 28px;
+    line-height: 1;
+    text-align: right;
+  }
 }
 
 .teaser__heading {
@@ -34,6 +49,14 @@
   letter-spacing: 0.05em;
   -webkit-text-stroke: 4px;
   text-align: right;
+  text-transform: uppercase;
+
+  @include vp-1023 {
+    margin-bottom: 27px;
+    font-size: 72px;
+    line-height: 86px;
+    text-transform: none;
+  }
 }
 
 .teaser__features {
@@ -44,15 +67,31 @@
   list-style: none;
   font-size: 14px;
   text-align: right;
+
+  @include vp-1023 {
+    padding-top: 44px;
+  }
 }
 
 .teaser__btn {
   grid-area: btn;
   margin: 0 0 45px 16px;
   outline: 2px solid;
+
+  @include vp-1023 {
+    margin: 0 0 25px 4px;
+  }
 }
 
 .teaser__image {
   grid-area: image;
   margin: 0 0 0 49px;
+
+  @include vp-1023 {
+    margin-left: 6px;
+  }
+
+  img {
+    object-fit: cover;
+  }
 }

@@ -6,6 +6,11 @@
 
 .params-list__key {
   font-size: 18px;
+
+  @include vp-1023 {
+    padding-top: 2px;
+    font-size: 12px;
+  }
 }
 
 .params-list__value {
@@ -16,6 +21,11 @@
   font-weight: 700;
   font-size: 40px;
 
+  @include vp-1023 {
+    margin: -2px 0 -1px;
+    font-size: 24px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -25,6 +35,12 @@
     min-width: 64px;
     height: 1px;
     background-color: currentColor;
+
+    @include vp-1023 {
+      top: 3px;
+      width: 98%;
+      min-width: 0;
+    }
   }
 
   &:last-child {
@@ -37,4 +53,10 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+
+  @include vp-1023 {
+    margin: 1px 0 0 4px;
+    font-size: 10px;
+    line-height: 12px;
+  }
 }

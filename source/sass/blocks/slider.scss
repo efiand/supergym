@@ -2,6 +2,10 @@
   position: relative;
   touch-action: pan-y;
   padding: 0 60px;
+
+  @include vp-1023 {
+    padding: 0 56px;
+  }
 }
 
 .slider__body {
@@ -26,6 +30,10 @@
 
   &--card {
     width: 260px;
+
+    @include vp-1099 {
+      width: 268px;
+    }
   }
 }
 
@@ -61,6 +69,10 @@
   &--prev {
     left: 0;
 
+    @include vp-1023 {
+      left: -4px;
+    }
+
     &::before {
       left: 8px;
       transform: rotate(45deg);
@@ -69,6 +81,10 @@
 
   &--next {
     right: 0;
+
+    @include vp-1023 {
+      right: -4px;
+    }
 
     &::before {
       right: 8px;
@@ -81,6 +97,10 @@
   .slider__list {
     flex-wrap: wrap;
     gap: 40px;
+
+    @include vp-1099 {
+      gap: 30px;
+    }
   }
 
   .slider__control {

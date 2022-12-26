@@ -1,12 +1,20 @@
 .accent-section {
   padding: 120px 0;
   background-color: $color-ghost-white;
+
+  @include vp-1023 {
+    padding: 91px 0 100px;
+  }
 }
 
 .accent-section__inner {
   &--decor {
     position: relative;
     z-index: 1;
+
+    @include vp-1023 {
+      padding-top: 9px;
+    }
 
     &::before {
       content: "";
@@ -19,6 +27,13 @@
       background-size: cover;
 
       @include background-image;
+
+      @include vp-1023 {
+        right: -73px;
+        bottom: -225px;
+        width: 420px;
+        height: 444px;
+      }
     }
   }
 }
@@ -45,7 +60,15 @@
     padding-right: 0;
   }
 
+  @include vp-1023 {
+    padding-bottom: 88px;
+  }
+
   .accent-section__heading {
     margin-bottom: 26px;
+
+    @include vp-1023 {
+      margin-bottom: 28px;
+    }
   }
 }

@@ -4,6 +4,10 @@
   gap: 10px 41px;
   padding: 0;
   list-style: none;
+
+  @include vp-1023 {
+    column-gap: 30px;
+  }
 }
 
 .nav__link {

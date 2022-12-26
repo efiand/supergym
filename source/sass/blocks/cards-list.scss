@@ -4,6 +4,11 @@
   gap: 40px;
   padding: 0;
   list-style: none;
+
+  @include vp-1023 {
+    grid-template-columns: 442px;
+    justify-content: center;
+  }
 }
 
 .cards-list__item {

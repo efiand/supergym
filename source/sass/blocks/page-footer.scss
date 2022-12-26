@@ -2,6 +2,10 @@
   padding: 40px 0;
   color: $color-default-white;
   background-color: $color-black-russian;
+
+  @include vp-1023 {
+    padding: 44px 0;
+  }
 }
 
 .page-footer__inner {
@@ -9,12 +13,22 @@
   justify-content: space-between;
   align-items: center;
   gap: 100px;
+
+  @include vp-1023 {
+    padding-right: 39px;
+    gap: 30px;
+  }
 }
 
 .page-footer__logo {
   flex-shrink: 0;
   width: 86px;
   margin-top: 11px;
+
+  @include vp-1023 {
+    width: 82px;
+    margin-top: 0;
+  }
 }
 
 .page-footer__nav {

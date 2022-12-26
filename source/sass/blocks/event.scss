@@ -2,6 +2,11 @@
   display: grid;
   grid-template-columns: 500px 1fr;
   align-items: center;
+
+  @include vp-1023 {
+    grid-template-columns: 292px 386px;
+    justify-content: center;
+  }
 }
 
 .event__content {
@@ -12,6 +17,12 @@
   padding: 80px 78px 87px;
   color: $color-default-white;
   background-color: $color-torchred;
+
+  @include vp-1023 {
+    grid-template-columns: 117px 1fr;
+    gap: 1px 29px;
+    padding: 45px 45px 50px;
+  }
 }
 
 .event__heading {
@@ -24,6 +35,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+
+  @include vp-1023 {
+    font-size: 48px;
+  }
 }
 
 .event__datetime {
@@ -33,10 +48,15 @@
 .event__description {
   grid-column: 1 / -1;
   margin-bottom: 39px;
+  font-size: 18px;
+
+  @include vp-1023 {
+    margin-bottom: 29px;
+    font-size: 12px;
+  }
 
   p {
     margin: 0;
-    font-size: 18px;
   }
 }
 
@@ -45,4 +65,15 @@
   outline: 2px solid;
   padding-top: 25px;
   padding-bottom: 24px;
+
+  @include vp-1023 {
+    padding-top: 12px;
+    padding-bottom: 13px;
+    font-size: 10px;
+    line-height: 12px;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
 }

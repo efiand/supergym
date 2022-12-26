@@ -145,10 +145,19 @@
 
 @mixin gradient-text {
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(142.51deg, $color-crimson 0%, $color-cobalt-light 87.33%);
+  background-image: linear-gradient(to right bottom, $color-crimson 0%, $color-cobalt-light 87.33%);
   background-clip: text;
 }
 
+@mixin conic-gradient($from, $at) {
+  background-image: conic-gradient(
+    from $from at $at,
+    $color-venetian-red -46.69deg,
+    $color-dark-cerulean 32.24deg,
+    $color-venetian-red 313.31deg,
+    $color-dark-cerulean 392.24deg
+  );
+}
 
 // Desktop first
 

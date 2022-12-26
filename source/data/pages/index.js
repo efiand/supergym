@@ -261,7 +261,7 @@ export default ({getImages, tel}) => {
     teaser: addTariffLink({
       features: ['Тренажёрный зал', 'Групповые занятия', 'Кардио-зона'],
       label: 'Омск',
-      image: getImages('teaser', {alt: 'Каким Вы можете стать благодаря нам.'}, false, false),
+      image: getImages('teaser', {alt: 'Каким Вы можете стать благодаря нам.'}, true, false),
       title: 'Фитнес центр',
     }),
     trainers: {

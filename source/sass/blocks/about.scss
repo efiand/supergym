@@ -5,10 +5,22 @@
   gap: 85px;
   padding-top: 120px;
   padding-bottom: 234px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding-top: 60px;
+    padding-bottom: 183px;
+  }
 }
 
 .about__content {
   padding-left: calc(6000% / 415);
+
+  @include vp-1023 {
+    padding: 0 50px;
+    text-align: center;
+  }
 
   h2 {
     margin: 39px 0 0;
@@ -17,16 +29,35 @@
     line-height: 57px;
     font-family: $ff-alumni-sans;
     letter-spacing: 0.03em;
+
+    @include vp-1023 {
+      font-size: 42px;
+      line-height: 50px;
+    }
   }
 
   p {
     margin: 7px 0 0;
     font-weight: 300;
 
+    @include vp-1023 {
+      margin-top: 0;
+    }
+
     &:first-of-type {
       margin-bottom: 40px;
       font-weight: 400;
       font-size: 18px;
+
+      @include vp-1023 {
+        margin-bottom: 34px;
+      }
+    }
+
+    &:nth-of-type(n + 3) {
+      @include vp-1023 {
+        @include visually-hidden;
+      }
     }
   }
 }
@@ -34,6 +65,10 @@
 .about__picture {
   align-self: end;
   margin: 0;
+
+  @include vp-1023 {
+    justify-self: center;
+  }
 }
 
 .about__video {
@@ -41,4 +76,11 @@
   right: calc(40400% / 1250);
   bottom: 119px;
   width: calc(36400% / 1250);
+
+  @include vp-1023 {
+    right: 50%;
+    bottom: 100px;
+    width: 266px;
+    transform: translateX(50%);
+  }
 }

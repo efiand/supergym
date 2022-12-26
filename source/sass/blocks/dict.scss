@@ -4,6 +4,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 17px 120px;
 
+  @include vp-1023 {
+    gap: 19px 77px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -13,15 +17,28 @@
     width: 1px;
     background-color: $color-light-slate-grey;
     transform: translateX(-50%);
+
+    @include vp-1023 {
+      left: calc(50% - 10px);
+    }
   }
 }
 
 .dict__key {
   margin: 0 0 4px;
   font-weight: 700;
+
+  @include vp-1023 {
+    margin-bottom: 6px;
+    font-size: 20px;
+  }
 }
 
 .dict__value {
   margin: 0;
   font-size: 14px;
+
+  @include vp-1023 {
+    font-size: 18px;
+  }
 }

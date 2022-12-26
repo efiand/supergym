@@ -17,10 +17,6 @@ export default (sliderElement) => {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      1024: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
       1100: {
         slidesPerView: 3,
         spaceBetween: 40,

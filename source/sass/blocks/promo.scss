@@ -1,6 +1,10 @@
 .promo__heading {
   margin: 0 0 33px;
   text-align: center;
+
+  @include vp-1023 {
+    margin-bottom: 42px;
+  }
 }
 
 .promo__list {
@@ -11,18 +15,32 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
 }
 
 .promo__item {
   border: 7px solid transparent;
   border-image: $border-image;
   color: $color-resolution-blue;
+
+  @include vp-1023 {
+    min-height: 211px;
+  }
 }
 
 .promo__figure {
   display: grid;
   grid-template-columns: 280px 1fr;
   grid-row: span 2;
+
+  @include vp-1023 {
+    grid-row: span 1;
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
 }
 
 .promo__picture {

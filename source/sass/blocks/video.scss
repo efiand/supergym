@@ -36,6 +36,11 @@
   cursor: pointer;
 
   @include default-interactive;
+
+  @include vp-1023 {
+    width: 73px;
+    height: 73px;
+  }
 }
 
 .video.is-active {

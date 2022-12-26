@@ -6,6 +6,10 @@
   padding: 54px 62px 55px;
   color: $color-default-white;
   background-color: $color-resolution-blue;
+
+  @include vp-1023 {
+    padding-left: 65px;
+  }
 }
 
 .review__picture {

@@ -4,4 +4,9 @@
   line-height: 65px;
   font-family: $ff-alumni-sans;
   letter-spacing: 0.03em;
+
+  @include vp-1023 {
+    font-size: 42px;
+    line-height: 50px;
+  }
 }

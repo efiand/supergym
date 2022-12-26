@@ -11,9 +11,10 @@
 
   &--alter {
     margin-bottom: 48px;
-    text-align-last: left;
+    text-align: left;
 
     @include vp-1249 {
+      margin-bottom: 32px;
       text-align: center;
     }
   }
@@ -21,31 +22,59 @@
 
 .page__subscriptions {
   margin-bottom: 120px;
+
+  @include vp-1023 {
+    margin-bottom: 100px;
+  }
 }
 
 .page__event {
   margin-bottom: 106px;
+
+  @include vp-1023 {
+    margin-bottom: 100px;
+  }
 }
 
 .page__trainers {
   margin-bottom: 91px;
+
+  @include vp-1023 {
+    margin-bottom: 100px;
+  }
 }
 
 .page__advantages {
   margin-bottom: 150px;
+
+  @include vp-1023 {
+    margin-bottom: 91px;
+  }
 }
 
 .page__promo {
   margin-bottom: 117px;
+
+  @include vp-1023 {
+    margin-bottom: 95px;
+  }
 }
 
 .page__reviews {
   margin-bottom: 120px;
+
+  @include vp-1023 {
+    margin-bottom: 100px;
+  }
 }
 
 .page__slider {
   width: 680px;
   margin: 0 auto;
+
+  @include vp-1099 {
+    width: 678px;
+  }
 
   &--wide {
     width: calc(100% + 120px);
@@ -57,7 +86,7 @@
     }
 
     @include vp-1099 {
-      width: 680px;
+      width: 678px;
     }
   }
 }

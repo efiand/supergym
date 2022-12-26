@@ -11,6 +11,12 @@
   padding: 7px 0 0;
   list-style: none;
   border-bottom: 2px solid rgba($color-grey, 0.2);
+
+  @include vp-1023 {
+    column-gap: 54px;
+    margin-bottom: 44px;
+    padding-top: 8px;
+  }
 }
 
 .tabs__control {
@@ -25,6 +31,11 @@
   cursor: pointer;
 
   @include default-interactive;
+
+  @include vp-1023 {
+    padding: 12px 0;
+    font-size: 18px;
+  }
 }
 
 .tabs__control.is-active {
