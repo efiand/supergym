@@ -4,6 +4,8 @@ const addFakeUrl = (payload) => {
   return data;
 };
 
+const projectName = 'SUPERGYM';
+
 export default () => ({
   getImages(filename, additions = {}, useTablet = true, useMobile = true) {
     const tabletSuffix = useTablet ? '-tablet' : '';
@@ -20,8 +22,9 @@ export default () => ({
       webpMobile2x: `img/${filename}${mobileSuffix}@2x.webp`,
     });
   },
+  description: `Сайт омского спортивного клуба ${projectName}.`,
   navLinks: ['Услуги', 'Абонементы', 'Акции', 'Тренеры', 'Расписание'].map(addFakeUrl),
-  projectName: 'SUPERGYM',
+  projectName,
   socials: [
     {
       id: 'vk',
