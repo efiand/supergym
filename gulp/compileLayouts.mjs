@@ -20,6 +20,10 @@ const enrichData = async (data, fileName) => {
       ...(await import(`../source/data/${fileName}.js${data.version}`)).default(data),
     };
   } catch (error) {
+    if (error.code !== 'ERR_MODULE_NOT_FOUND') {
+      console.error(error);
+    }
+
     return data;
   }
 };
