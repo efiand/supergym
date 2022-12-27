@@ -19,6 +19,10 @@
   @include vp-1023 {
     gap: 30px;
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .promo__item {
@@ -41,11 +45,19 @@
     grid-column: 1 / -1;
     justify-self: center;
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .promo__picture {
   align-self: center;
   margin: 0;
+
+  @include vp-767 {
+    justify-self: center;
+  }
 }
 
 .promo__content {
@@ -53,6 +65,11 @@
   flex-direction: column;
   height: 100%;
   padding: 17px 28px 27px;
+
+  @include vp-767 {
+    padding: 28px 28px 38px;
+    text-align: center;
+  }
 
   h3 {
     margin: 0 0 3px;
@@ -93,6 +110,10 @@
   color: $color-default-white;
   background-color: $color-torchred;
 
+  @include vp-767 {
+    padding-bottom: 14px;
+  }
+
   h3 {
     font-size: 28px;
   }
@@ -100,6 +121,10 @@
   p {
     font-size: 18px;
     line-height: 25px;
+
+    @include vp-767 {
+      margin: -5px 0 30px;
+    }
   }
 
   .promo__link {

@@ -2,9 +2,11 @@
   max-width: 1250px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 45px;
+  padding-right: 45px;
+  padding-left: 45px;
 
   @include vp-767 {
-    padding: 0 15px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }

@@ -1,4 +1,5 @@
 .page-footer {
+  position: relative;
   padding: 40px 0;
   color: $color-default-white;
   background-color: $color-black-russian;
@@ -18,6 +19,11 @@
     padding-right: 39px;
     gap: 30px;
   }
+
+  @include vp-767 {
+    gap: 34px;
+    flex-wrap: wrap;
+  }
 }
 
 .page-footer__logo {
@@ -29,15 +35,41 @@
     width: 82px;
     margin-top: 0;
   }
+
+  @include vp-767 {
+    position: absolute;
+    top: 51px;
+    left: 15px;
+    width: 68px;
+  }
 }
 
 .page-footer__nav {
   justify-content: center;
   margin: 0 0 0 11px;
+
+  @include vp-767 {
+    display: block;
+    width: 100%;
+    margin: 0;
+    column-count: 2;
+
+    li {
+      margin-top: 16px;
+    }
+
+    li:first-child {
+      margin-top: 41px;
+    }
+  }
 }
 
 .page-footer__socials {
   justify-content: flex-end;
   min-width: 100px;
   margin: 0;
+
+  @include vp-767 {
+    margin-left: -3px;
+  }
 }

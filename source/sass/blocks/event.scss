@@ -7,6 +7,11 @@
     grid-template-columns: 292px 386px;
     justify-content: center;
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 .event__content {
@@ -21,7 +26,7 @@
   @include vp-1023 {
     grid-template-columns: 117px 1fr;
     gap: 1px 29px;
-    padding: 45px 45px 50px;
+    padding: 45px 44px 50px;
   }
 }
 
@@ -74,6 +79,18 @@
 
     &:not(:focus-visible) {
       outline: none;
+    }
+  }
+}
+
+.event__picture {
+  margin: 0;
+
+  img {
+    object-fit: cover;
+
+    @include vp-424 {
+      min-height: 292px;
     }
   }
 }

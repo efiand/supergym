@@ -12,6 +12,12 @@
     padding-top: 60px;
     padding-bottom: 183px;
   }
+
+  @include vp-767 {
+    gap: 34px;
+    padding-top: 63px;
+    padding-bottom: 70px;
+  }
 }
 
 .about__content {
@@ -20,6 +26,11 @@
   @include vp-1023 {
     padding: 0 50px;
     text-align: center;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    text-align: left;
   }
 
   h2 {
@@ -33,6 +44,12 @@
     @include vp-1023 {
       font-size: 42px;
       line-height: 50px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 5px;
+      font-size: 32px;
+      line-height: 38px;
     }
   }
 
@@ -52,6 +69,16 @@
       @include vp-1023 {
         margin-bottom: 34px;
       }
+
+      @include vp-767 {
+        margin-bottom: 24px;
+      }
+    }
+
+    &:nth-of-type(n + 2) {
+      @include vp-424 {
+        margin-right: 30px;
+      }
     }
 
     &:nth-of-type(n + 3) {
@@ -69,6 +96,11 @@
   @include vp-1023 {
     justify-self: center;
   }
+
+  @include vp-424 {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
 }
 
 .about__video {
@@ -82,5 +114,16 @@
     bottom: 100px;
     width: 266px;
     transform: translateX(50%);
+  }
+
+  @include vp-767 {
+    bottom: 36px;
+  }
+
+  @include vp-424 {
+    position: static;
+    width: auto;
+    margin: 6px -15px 0;
+    transform: none;
   }
 }

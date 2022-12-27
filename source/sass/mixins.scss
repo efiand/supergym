@@ -190,3 +190,9 @@
     @content;
   }
 }
+
+@mixin vp-424 {
+  @media (max-width: ($vp-425 - 1px)) {
+    @content;
+  }
+}

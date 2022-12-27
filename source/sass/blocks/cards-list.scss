@@ -6,8 +6,12 @@
   list-style: none;
 
   @include vp-1023 {
-    grid-template-columns: 442px;
+    grid-template-columns: minmax(auto, 442px);
     justify-content: center;
+  }
+
+  @include vp-767 {
+    gap: 35px;
   }
 }
 

@@ -3,6 +3,10 @@
   z-index: 1;
   font-weight: 700;
   font-size: 60px;
+
+  @include vp-767 {
+    font-size: 48px;
+  }
 }
 
 .price__decor {
@@ -13,6 +17,10 @@
   font-size: 100px;
   color: rgba($color-whisper, 0.48);
   transform: translateX(-50%);
+
+  @include vp-767 {
+    font-size: 80px;
+  }
 }
 
 .price__value {

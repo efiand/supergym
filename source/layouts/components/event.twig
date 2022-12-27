@@ -22,5 +22,7 @@
 		<a class="event__btn btn" href="{{ link.url }}">{{ link.title }}</a>
 	</div>
 
-	{% include 'picture.twig' with image %}
+	<p class="event__picture">
+		{% include 'picture.twig' with image %}
+	</p>
 </article>

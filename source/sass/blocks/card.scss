@@ -14,21 +14,40 @@
       border: 1px solid $color-default-white;
     }
   }
+
+  @include vp-767 {
+    padding-top: 43px;
+    padding-bottom: 47px;
+  }
 }
 
 .card__heading {
   margin: 0 0 5px;
   font-weight: 700;
   font-size: 26px;
+
+  @include vp-767 {
+    margin-bottom: 9px;
+    font-size: 22px;
+    line-height: 24px;
+  }
 }
 
 .card__description {
   margin: 0 0 66px;
   color: $color-chambray;
+
+  @include vp-767 {
+    margin-bottom: 54px;
+  }
 }
 
 .card__price {
   margin: 0 0 34px;
+
+  @include vp-767 {
+    margin-bottom: 31px;
+  }
 }
 
 .card__btn {

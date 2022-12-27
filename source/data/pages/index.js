@@ -108,12 +108,16 @@ export default ({getImages, tel}) => {
     },
     contacts: {
       heading: 'Контакты',
-      list: [
-        ['Адрес:', 'г. Омск, ул. 60 лет Октября, 7'],
-        ['Телефон:', html`<a href="${tel.url}">${tel.title}</a>`],
-        ['График работы:', 'Пн-Вс: с 8:00 до 22:00'],
-        ['Email:', html`<a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>`],
-      ].map(([key, value]) => ({key, value})),
+      lists: [
+        [
+          ['Адрес:', 'г. Омск, ул. 60 лет Октября, 7'],
+          ['График работы:', 'Пн-Вс: с 8:00 до 22:00'],
+        ],
+        [
+          ['Телефон:', html`<a href="${tel.url}">${tel.title}</a>`],
+          ['Email:', html`<a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>`],
+        ],
+      ].map((list) => list.map(([key, value]) => ({key, value}))),
     },
     event: {
       description: html`<p>Ежегодные соревнования по CrossFit</p>`,

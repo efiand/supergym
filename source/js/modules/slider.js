@@ -13,7 +13,7 @@ export default (sliderElement) => {
 
   if (isMultiple) {
     sliderOptions.breakpoints = {
-      640: {
+      768: {
         slidesPerView: 2,
         spaceBetween: 30,
       },

@@ -2,10 +2,15 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 17px 120px;
+  gap: 120px;
 
   @include vp-1023 {
-    gap: 19px 77px;
+    gap: 77px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 19px;
   }
 
   &::before {
@@ -21,7 +26,15 @@
     @include vp-1023 {
       left: calc(50% - 10px);
     }
+
+    @include vp-767 {
+      content: none;
+    }
   }
+}
+
+.dict__item {
+  margin: 0;
 }
 
 .dict__key {
@@ -40,5 +53,17 @@
 
   @include vp-1023 {
     font-size: 18px;
+  }
+
+  + .dict__key {
+    margin-top: 16px;
+
+    @include vp-1023 {
+      margin-top: 19px;
+    }
+  }
+
+  a {
+    overflow-wrap: anywhere;
   }
 }

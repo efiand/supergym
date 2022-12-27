@@ -6,7 +6,7 @@
 
   @include background-image;
 
-  @include vp-767 {
+  @include vp-424 {
     padding-top: calc(16700% / 320);
   }
 }

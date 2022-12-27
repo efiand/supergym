@@ -9,4 +9,9 @@
     font-size: 42px;
     line-height: 50px;
   }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }

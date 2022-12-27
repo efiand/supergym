@@ -14,6 +14,13 @@
 
     @include conic-gradient(139.4deg, 160px 198px);
   }
+
+  @include vp-767 {
+    padding-top: 16px;
+    padding-bottom: 81px;
+
+    @include conic-gradient(171.43deg, 113px 168px);
+  }
 }
 
 .page-header__container {
@@ -28,9 +35,17 @@
   letter-spacing: 0.03em;
 
   @include vp-1023 {
+    font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    margin-bottom: 73px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -41,6 +56,11 @@
     width: 82px;
     margin-top: 7px;
   }
+
+  @include vp-767 {
+    width: 69px;
+    margin-top: 5px;
+  }
 }
 
 .page-header__link {
@@ -49,4 +69,8 @@
 
 .page-header__teaser {
   margin-top: -63px;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
 }
