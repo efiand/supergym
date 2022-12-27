@@ -7,7 +7,6 @@
     "not IE 11"
   ],
   "scripts": {
-    "add-build": "git add build/*",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig & npm run stylelint & eslint source/",
@@ -67,7 +66,6 @@
     "node": ">=16.15.1"
   },
   "pre-commit": [
-    "build",
-    "add-build"
+    "test"
   ]
 }
