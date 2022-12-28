@@ -2,6 +2,7 @@ export default (sliderElement) => {
   const isMultiple = typeof sliderElement.dataset.multiple !== 'undefined';
 
   const sliderOptions = {
+    grabCursor: true,
     loop: true,
     navigation: {
       nextEl: sliderElement.querySelector('[data-next]'),
