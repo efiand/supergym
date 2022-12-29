@@ -2,7 +2,9 @@
 	<div class="page-footer__inner container">
 		{% include 'logo.twig' with { bemMix: 'page-footer__logo' } %}
 
-		{% include 'nav.twig' with { bemMix: 'page-footer__nav' } %}
+		<nav class="page-footer__nav-wrapper">
+			{% include 'nav.twig' with { bemMix: 'page-footer__nav' } %}
+		</nav>
 
 		{% include 'socials.twig' with { bemMix: 'page-footer__socials' } %}
 	</div>
