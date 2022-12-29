@@ -13,6 +13,7 @@
 
 html {
   min-width: 320px;
+  overflow-wrap: anywhere;
   scroll-behavior: smooth;
   font-size: $fz-default;
   line-height: 1.5;
@@ -46,15 +47,25 @@ video {
   height: auto;
 }
 
-// ios button \ inputs reset
 select,
 textarea,
-input:matches([type="email"], [type="number"], [type="password"], [type="search"], [type="tel"], [type="text"], [type="url"]),
 button,
+[type="email"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="url"],
 [type="button"],
 [type="reset"],
 [type="submit"] {
   appearance: none;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
 // firefox placeholder \ invalid fix + ios bdrs
@@ -115,9 +126,4 @@ input[type="number"] {
   &::-webkit-inner-spin-button {
     appearance: none;
   }
-}
-
-:disabled {
-  opacity: 0.5;
-  pointer-events: none;
 }

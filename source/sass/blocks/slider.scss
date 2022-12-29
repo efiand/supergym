@@ -3,7 +3,7 @@
   touch-action: pan-y;
   padding: 0 60px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 0 56px;
   }
 
@@ -35,7 +35,7 @@
   &--card {
     width: 260px;
 
-    @include vp-1099 {
+    @include vp-1199 {
       width: 268px;
     }
 
@@ -88,7 +88,7 @@
   &--prev {
     left: 0;
 
-    @include vp-1023 {
+    @include vp-1199 {
       left: -4px;
     }
 
@@ -101,7 +101,7 @@
   &--next {
     right: 0;
 
-    @include vp-1023 {
+    @include vp-1199 {
       right: -4px;
     }
 
@@ -117,7 +117,7 @@
     flex-wrap: wrap;
     gap: 40px;
 
-    @include vp-1099 {
+    @include vp-1199 {
       gap: 30px;
     }
   }

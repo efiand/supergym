@@ -16,6 +16,7 @@
   left: 50%;
   font-size: 100px;
   color: rgba($color-whisper, 0.48);
+  overflow-wrap: normal;
   transform: translateX(-50%);
 
   @include vp-767 {

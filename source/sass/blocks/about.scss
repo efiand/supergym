@@ -6,7 +6,7 @@
   padding-top: 120px;
   padding-bottom: 234px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     grid-template-columns: 1fr;
     gap: 44px;
     padding-top: 60px;
@@ -23,7 +23,7 @@
 .about__content {
   padding-left: calc(6000% / 415);
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 0 50px;
     text-align: center;
   }
@@ -41,7 +41,7 @@
     font-family: $ff-alumni-sans;
     letter-spacing: 0.03em;
 
-    @include vp-1023 {
+    @include vp-1199 {
       font-size: 42px;
       line-height: 50px;
     }
@@ -57,7 +57,7 @@
     margin: 7px 0 0;
     font-weight: 300;
 
-    @include vp-1023 {
+    @include vp-1199 {
       margin-top: 0;
     }
 
@@ -66,7 +66,7 @@
       font-weight: 400;
       font-size: 18px;
 
-      @include vp-1023 {
+      @include vp-1199 {
         margin-bottom: 34px;
       }
 
@@ -82,7 +82,7 @@
     }
 
     &:nth-of-type(n + 3) {
-      @include vp-1023 {
+      @include vp-1199 {
         @include visually-hidden;
       }
     }
@@ -93,7 +93,7 @@
   align-self: end;
   margin: 0;
 
-  @include vp-1023 {
+  @include vp-1199 {
     justify-self: center;
   }
 
@@ -109,7 +109,7 @@
   bottom: 119px;
   width: calc(36400% / 1250);
 
-  @include vp-1023 {
+  @include vp-1199 {
     right: 50%;
     bottom: 100px;
     width: 266px;

@@ -2,7 +2,7 @@
   padding: 120px 0;
   background-color: $color-ghost-white;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 91px 0 100px;
   }
 
@@ -17,7 +17,7 @@
     position: relative;
     z-index: 1;
 
-    @include vp-1023 {
+    @include vp-1199 {
       padding-top: 9px;
     }
 
@@ -33,7 +33,7 @@
 
       @include background-image;
 
-      @include vp-1023 {
+      @include vp-1199 {
         right: -73px;
         bottom: -225px;
         width: 420px;
@@ -69,7 +69,7 @@
     padding-right: 0;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-bottom: 88px;
   }
 
@@ -81,7 +81,7 @@
   .accent-section__heading {
     margin-bottom: 26px;
 
-    @include vp-1023 {
+    @include vp-1199 {
       margin-bottom: 28px;
     }
   }

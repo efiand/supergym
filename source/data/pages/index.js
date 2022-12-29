@@ -1,12 +1,38 @@
+import decline from '../../js/utils/decline.js';
 import html from '../../js/utils/html.js';
 
-const addTariffLink = (tariff) =>
-  Object.assign(tariff, {
-    link: {
-      title: 'Купить абонемент',
-      url: '#!',
-    },
-  });
+const getSubscription = (months = 1, discount = 1) => {
+  const times = 12 * months;
+  const multiplier = parseInt(months * discount, 10);
+
+  return {
+    list: [
+      {
+        description: `${times} ${decline(times, ['занятие', 'занятия', 'занятий'])}`,
+        heading: 'С тренером',
+        price: 5000 * multiplier,
+      },
+      {
+        description: 'с 8:00 до 17:00 ',
+        heading: 'Дневной',
+        price: 1700 * multiplier,
+      },
+      {
+        description: 'с 8:00 до 22:00 ',
+        heading: 'Полный день',
+        price: 2700 * multiplier,
+      },
+    ].map((tariff) =>
+      Object.assign(tariff, {
+        link: {
+          title: 'Купить абонемент',
+          url: '#!',
+        },
+      })
+    ),
+    title: `${months} ${decline(months, ['месяц', 'месяца', 'месяцев'])}`,
+  };
+};
 
 export default ({getImages, tel}) => {
   const trainersList = [
@@ -67,8 +93,8 @@ export default ({getImages, tel}) => {
         </p> `,
       image: getImages('about', {alt: 'Каким выглядит один из наших залов.'}),
       video: {
-        file: 'blank',
         poster: getImages('about-video', {}, false, true),
+        youtube: '9TZXsZItgdw',
       },
     },
     advantages: {
@@ -174,68 +200,7 @@ export default ({getImages, tel}) => {
     subscriptions: {
       decor: getImages('wheels', {}, false, false),
       heading: 'Абонементы',
-      groups: [
-        {
-          list: [
-            {
-              description: '12 занятий',
-              heading: 'С тренером',
-              price: 5000,
-            },
-            {
-              description: 'с 8:00 до 17:00 ',
-              heading: 'Дневной',
-              price: 1700,
-            },
-            {
-              description: 'с 8:00 до 22:00 ',
-              heading: 'Полный день',
-              price: 2700,
-            },
-          ].map(addTariffLink),
-          title: '1 месяц',
-        },
-        {
-          list: [
-            {
-              description: 'с 8:00 до 17:00 ',
-              heading: 'Дневной',
-              price: 1700,
-            },
-            {
-              description: '12 занятий',
-              heading: 'С тренером',
-              price: 5000,
-            },
-            {
-              description: 'с 8:00 до 22:00 ',
-              heading: 'Полный день',
-              price: 2700,
-            },
-          ].map(addTariffLink),
-          title: '6 месяцев',
-        },
-        {
-          list: [
-            {
-              description: '12 занятий',
-              heading: 'С тренером',
-              price: 5000,
-            },
-            {
-              description: 'с 8:00 до 22:00 ',
-              heading: 'Полный день',
-              price: 2700,
-            },
-            {
-              description: 'с 8:00 до 17:00 ',
-              heading: 'Дневной',
-              price: 1700,
-            },
-          ].map(addTariffLink),
-          title: '12 месяцев',
-        },
-      ],
+      groups: [getSubscription(), getSubscription(6, 0.9), getSubscription(12, 0.8)],
     },
     ticket: {
       action: 'https://echo.htmlacademy.ru',
@@ -262,12 +227,16 @@ export default ({getImages, tel}) => {
       ],
       heading: 'Бесплатное занятие',
     },
-    teaser: addTariffLink({
+    teaser: {
       features: ['Тренажёрный зал', 'Групповые занятия', 'Кардио-зона'],
       label: 'Омск',
+      link: {
+        title: 'Купить абонемент',
+        url: '#subscriptions',
+      },
       image: getImages('teaser', {alt: 'Каким Вы можете стать благодаря нам.'}, true, false),
       title: 'Фитнес центр',
-    }),
+    },
     trainers: {
       heading: 'Тренеры',
       list: trainersList,

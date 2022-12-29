@@ -1,3 +1,4 @@
+import initForm from './modules/form.js';
 import initLazy from './modules/init-lazy.js';
 import initSlider from './modules/slider.js';
 import initTabs from './modules/tabs.js';
@@ -5,9 +6,9 @@ import initVideo from './modules/video.js';
 
 initLazy(() => {
   // сюда следует добавить скрипты, не участвующие в работе первого экрана
-
-  document.querySelectorAll('[data-tabs]').forEach(initTabs);
+  document.querySelectorAll('[data-form]').forEach(initForm);
   document.querySelectorAll('[data-slider]').forEach(initSlider);
+  document.querySelectorAll('[data-tabs]').forEach(initTabs);
   document.querySelectorAll('[data-video]').forEach(initVideo);
 });
 

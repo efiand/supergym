@@ -9,7 +9,7 @@
     @include conic-gradient(130.31deg, 160px 257px);
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-top: 34px;
 
     @include conic-gradient(139.4deg, 160px 198px);
@@ -34,7 +34,7 @@
   font-family: $ff-alumni-sans;
   letter-spacing: 0.03em;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -52,7 +52,7 @@
 .page-header__logo {
   margin-top: 10px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 82px;
     margin-top: 7px;
   }
@@ -70,7 +70,7 @@
 .page-header__teaser {
   margin-top: -63px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-top: 0;
   }
 }

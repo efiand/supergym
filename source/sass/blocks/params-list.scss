@@ -7,7 +7,7 @@
 .params-list__key {
   font-size: 18px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-top: 2px;
     font-size: 12px;
   }
@@ -21,7 +21,7 @@
   font-weight: 700;
   font-size: 40px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin: -2px 0 -1px;
     font-size: 24px;
   }
@@ -36,7 +36,7 @@
     height: 1px;
     background-color: currentColor;
 
-    @include vp-1023 {
+    @include vp-1199 {
       top: 3px;
       width: 98%;
       min-width: 0;
@@ -54,7 +54,7 @@
   font-size: 13px;
   line-height: 18px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin: 1px 0 0 4px;
     font-size: 10px;
     line-height: 12px;

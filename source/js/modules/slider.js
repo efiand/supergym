@@ -1,9 +1,9 @@
 export default (sliderElement) => {
-  const isMultiple = typeof sliderElement.dataset.multiple !== 'undefined';
+  const {loop, multiple} = sliderElement.dataset;
 
   const sliderOptions = {
     grabCursor: true,
-    loop: true,
+    loop: typeof loop !== 'undefined',
     navigation: {
       nextEl: sliderElement.querySelector('[data-next]'),
       prevEl: sliderElement.querySelector('[data-prev]'),
@@ -12,17 +12,21 @@ export default (sliderElement) => {
     wrapperClass: 'slider__list',
   };
 
-  if (isMultiple) {
+  if (typeof multiple !== 'undefined') {
     sliderOptions.breakpoints = {
       768: {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      1100: {
+      1200: {
+        allowTouchMove: false,
+        grabCursor: false,
         slidesPerView: 3,
         spaceBetween: 40,
       },
-      1250: {
+      1300: {
+        allowTouchMove: false,
+        grabCursor: false,
         slidesPerView: 4,
         spaceBetween: 40,
       },

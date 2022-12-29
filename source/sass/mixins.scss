@@ -45,7 +45,7 @@
       }
     }
 
-    @include vp-1023 {
+    @include vp-1199 {
       background-image: var(--bg-webpTablet, none);
 
       @include retina {
@@ -173,8 +173,8 @@
   }
 }
 
-@mixin vp-1099 {
-  @media (max-width: ($vp-1100 - 1px)) {
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
     @content;
   }
 }

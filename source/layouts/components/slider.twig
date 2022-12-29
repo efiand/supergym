@@ -1,4 +1,4 @@
-<div class="slider no-js {{ bemMix }}" data-slider {{ multiple ? 'data-multiple' }}>
+<div class="slider no-js {{ bemMix }}" data-slider {{ multiple ? 'data-multiple' }} {{ loop ? 'data-loop' }}>
 	<div class="slider__body {{ shadow ? 'slider__body--shadow' }}" data-slider-body>
 		<ul class="slider__list {{ multiple ? 'slider__list--gapped' }}">
 			{% for slide in slides %}

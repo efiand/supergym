@@ -13,7 +13,7 @@
   list-style: none;
   border-bottom: 2px solid rgba($color-grey, 0.2);
 
-  @include vp-1023 {
+  @include vp-1199 {
     column-gap: 54px;
     margin-bottom: 44px;
     padding-top: 8px;
@@ -38,7 +38,7 @@
 
   @include default-interactive;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 12px 0;
     font-size: 18px;
   }

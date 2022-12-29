@@ -7,6 +7,7 @@
 		bemMix: 'page__subscriptions',
 		component: 'tabs',
 		decor: subscriptions.decor,
+		id: 'subscriptions',
 		data: {
 			component: 'cards-list',
 			listComponent: 'card',
@@ -25,6 +26,7 @@
 		{% include '../components/slider.twig' with {
 			bemMix: 'page__slider page__slider--wide',
 			component: 'figure',
+			loop: true,
 			multiple: true,
 			slides: trainers.list
 		} %}

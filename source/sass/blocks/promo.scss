@@ -2,7 +2,7 @@
   margin: 0 0 33px;
   text-align: center;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-bottom: 42px;
   }
 }
@@ -16,7 +16,7 @@
   padding: 0;
   list-style: none;
 
-  @include vp-1023 {
+  @include vp-1199 {
     gap: 30px;
   }
 
@@ -30,7 +30,7 @@
   border-image: $border-image;
   color: $color-resolution-blue;
 
-  @include vp-1023 {
+  @include vp-1199 {
     min-height: 211px;
   }
 }
@@ -40,7 +40,7 @@
   grid-template-columns: 280px 1fr;
   grid-row: span 2;
 
-  @include vp-1023 {
+  @include vp-1199 {
     grid-row: span 1;
     grid-column: 1 / -1;
     justify-self: center;

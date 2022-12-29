@@ -1,9 +1,13 @@
 <div class="video is-active" {{ background(poster) }} data-video>
-	<video class="video__player" poster="{{ poster.default }}" controls {{ not immediately ? 'preload="none"' }} data-player>
-		<source src="video/{{ file }}.m4v">
-		<source src="video/{{ file }}.ogv" type="video/ogg">
-		<source src="video/{{ file }}.webm" type="video/webm">
-	</video>
+	{% if file %}
+		<video class="video__player" poster="{{ poster.default }}" controls {{ not immediately ? 'preload="none"' }} data-player>
+			<source src="video/{{ file }}.m4v">
+			<source src="video/{{ file }}.ogv" type="video/ogg">
+			<source src="video/{{ file }}.webm" type="video/webm">
+		</video>
+	{% elseif youtube %}
+		<div class="video__player" id="{{ youtube }}" data-youtube></div>
+	{% endif %}
 
 	<button class="video__control" type="button" data-control>
 		<span class="visually-hidden">Проиграть видео.</span>

@@ -4,7 +4,7 @@
   color: $color-default-white;
   background-color: $color-black-russian;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 44px 0;
   }
 }
@@ -15,7 +15,7 @@
   align-items: center;
   gap: 100px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-right: 39px;
     gap: 30px;
   }
@@ -31,7 +31,7 @@
   width: 86px;
   margin-top: 11px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 82px;
     margin-top: 0;
   }

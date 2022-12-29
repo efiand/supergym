@@ -2,8 +2,10 @@
   padding: 50px 30px 60px;
   text-align: center;
   border: 7px solid transparent;
+  outline: none;
 
-  @include hover-focus(true) {
+  &:hover,
+  &:focus {
     border-image: $border-image;
 
     .card__btn {
