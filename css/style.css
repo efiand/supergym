@@ -2648,9 +2648,12 @@ input[type=number]::-webkit-inner-spin-button {
     width: 68px;
   }
 
+  .page-footer__nav-wrapper {
+    width: 100%;
+  }
+
   .page-footer__nav {
     display: block;
-    width: 100%;
     margin: 0;
     -moz-column-count: 2;
     column-count: 2;
