@@ -444,6 +444,7 @@ template {
 
 html {
   min-width: 320px;
+  overflow-wrap: anywhere;
   scroll-behavior: smooth;
   font-size: 16px;
   line-height: 1.5;
@@ -478,14 +479,37 @@ video {
 
 select,
 textarea,
-input:matches([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]),
 button,
+[type=email],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=url],
 [type=button],
 [type=reset],
 [type=submit] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+select:disabled,
+textarea:disabled,
+button:disabled,
+[type=email]:disabled,
+[type=number]:disabled,
+[type=password]:disabled,
+[type=search]:disabled,
+[type=tel]:disabled,
+[type=text]:disabled,
+[type=url]:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 input,
@@ -546,11 +570,6 @@ input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
-}
-
-:disabled {
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 .visually-hidden {
@@ -654,13 +673,13 @@ input[type=number]::-webkit-inner-spin-button {
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
     .accent-section__inner--decor::before {
       background-image: var(--bg-webpTablet, none);
     }
 }
 
-@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
     .accent-section__inner--decor::before {
       background-image: var(--bg-webpTablet2x, none);
     }
@@ -722,7 +741,6 @@ input[type=number]::-webkit-inner-spin-button {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
-  overflow-wrap: anywhere;
   color: inherit;
   background-color: transparent;
   border: 2px solid;
@@ -873,10 +891,6 @@ input[type=number]::-webkit-inner-spin-button {
   margin-top: 16px;
 }
 
-.dict__value a {
-  overflow-wrap: anywhere;
-}
-
 .event {
   display: grid;
   grid-template-columns: 500px 1fr;
@@ -895,7 +909,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 .event__heading {
   margin: 5px 0 0;
-  overflow-wrap: anywhere;
   font-weight: 600;
   font-size: 82px;
   line-height: 0.96;
@@ -1320,6 +1333,7 @@ input[type=number]::-webkit-inner-spin-button {
   left: 50%;
   font-size: 100px;
   color: rgba(232, 232, 232, 0.48);
+  overflow-wrap: normal;
   transform: translateX(-50%);
 }
 
@@ -1476,6 +1490,7 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0;
   font-weight: 700;
   font-size: 71px;
+  overflow-wrap: normal;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right bottom, #d10a42 0%, #0041ca 87.33%);
   -webkit-background-clip: text;
@@ -1795,7 +1810,7 @@ input[type=number]::-webkit-inner-spin-button {
   grid-template-rows: 1fr min-content min-content;
   grid-template-columns: 133px 246px 1fr;
   grid-template-areas: "features label image" "features heading image" "features btn image";
-  gap: 12px 16px;
+  gap: 13px 16px;
   min-height: 658px;
   padding-top: 51px;
   padding-bottom: 51px;
@@ -1813,11 +1828,11 @@ input[type=number]::-webkit-inner-spin-button {
   grid-area: label;
   align-self: end;
   margin: 0 0 0 64px;
-  font-size: 40px;
+  font-size: 48px;
   line-height: 58px;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.03em;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .teaser__heading {
@@ -1831,6 +1846,7 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-text-stroke: 4px;
   text-align: right;
   text-transform: uppercase;
+  overflow-wrap: normal;
 }
 
 .teaser__features {
@@ -1887,13 +1903,13 @@ input[type=number]::-webkit-inner-spin-button {
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
     .video {
       background-image: var(--bg-webpTablet, none);
     }
 }
 
-@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
     .video {
       background-image: var(--bg-webpTablet2x, none);
     }
@@ -1983,6 +1999,11 @@ input[type=number]::-webkit-inner-spin-button {
     margin-left: 0;
     padding-right: 0;
   }
+
+  .page__slider--wide {
+    width: 980px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 1249px) {
@@ -1999,11 +2020,6 @@ input[type=number]::-webkit-inner-spin-button {
   .page__heading--alter {
     margin-bottom: 32px;
     text-align: center;
-  }
-
-  .page__slider--wide {
-    width: 980px;
-    margin: 0 auto;
   }
 
   .page-header {
@@ -2025,21 +2041,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 
-@media (max-width: 1099px) {
-  .page__slider {
-    width: 678px;
-  }
-
-  .slider__item--card {
-    width: 268px;
-  }
-
-  .slider.no-js .slider__list {
-    gap: 30px;
-  }
-}
-
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .about {
     grid-template-columns: 1fr;
     gap: 44px;
@@ -2235,6 +2237,10 @@ input[type=number]::-webkit-inner-spin-button {
     margin-bottom: 100px;
   }
 
+  .page__slider {
+    width: 678px;
+  }
+
   .page-header {
     padding-top: 34px;
     background-image: conic-gradient(from 139.4deg at 160px 198px, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
@@ -2358,12 +2364,20 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 0 56px;
   }
 
+  .slider__item--card {
+    width: 268px;
+  }
+
   .slider__control--prev {
     left: -4px;
   }
 
   .slider__control--next {
     right: -4px;
+  }
+
+  .slider.no-js .slider__list {
+    gap: 30px;
   }
 
   .tabs__controls {
@@ -2387,9 +2401,9 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .teaser__label {
-    margin: 0 5px 0 0;
-    font-size: 28px;
-    line-height: 1;
+    margin: 0 4px -5px 0;
+    font-size: 34px;
+    line-height: 41px;
     text-align: right;
   }
 
@@ -2796,8 +2810,9 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .teaser__label {
-    margin: 0 3px 6px 0;
-    font-size: 24px;
+    margin: -6px 3px 2px 0;
+    font-size: 28px;
+    line-height: 34px;
   }
 
   .teaser__features {
