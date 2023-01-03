@@ -1962,7 +1962,11 @@ input[type=number]::-webkit-inner-spin-button {
 
 .video__control {
   display: flex;
+  background-color: transparent;
   background-size: cover;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
   transition: opacity 0.3s ease;
 }
 
