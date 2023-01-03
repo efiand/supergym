@@ -8,20 +8,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0 46px;
-  margin: 0 0 38px;
+  margin: 0;
   padding: 7px 0 0;
   list-style: none;
   border-bottom: 2px solid rgba($color-grey, 0.2);
 
   @include vp-1199 {
     column-gap: 54px;
-    margin-bottom: 44px;
     padding-top: 8px;
   }
 
   @include vp-767 {
     column-gap: 45px;
-    margin-bottom: 34px;
   }
 }
 
@@ -68,9 +66,17 @@
   display: grid;
   gap: 40px;
   width: 100%;
-  margin: 0;
+  margin: 38px 0 0;
   padding: 0;
   list-style: none;
+
+  @include vp-1199 {
+    margin-top: 44px;
+  }
+
+  @include vp-767 {
+    margin-top: 34px;
+  }
 }
 
 .tabs__item {
