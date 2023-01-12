@@ -957,24 +957,36 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: rgba(16, 38, 84, 0.89);
 }
 
+.figure:hover,
+.figure:focus,
 .figure:focus-within {
   box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
 }
 
+.figure:hover .figure__body,
+.figure:focus .figure__body,
 .figure:focus-within .figure__body {
   background-color: inherit;
 }
 
+.figure:hover .figure__heading,
+.figure:focus .figure__heading,
 .figure:focus-within .figure__heading {
   margin-top: 0;
 }
 
+.figure:hover .figure__description,
+.figure:hover .figure__content,
+.figure:focus .figure__description,
+.figure:focus .figure__content,
 .figure:focus-within .figure__description,
 .figure:focus-within .figure__content {
   max-height: 100%;
   transform: scaleY(1);
 }
 
+.figure:hover .figure__description,
+.figure:focus .figure__description,
 .figure:focus-within .figure__description {
   margin: -4px 0 34px;
 }
@@ -2963,34 +2975,6 @@ input[type=number]::-webkit-inner-spin-button {
   .btn:hover:active,
   .btn.focus-visible:active {
     opacity: 0.5;
-  }
-
-  .figure:hover,
-  .figure:hover:not(.focus-visible) {
-    box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
-  }
-
-  .figure:hover .figure__body,
-  .figure:hover:not(.focus-visible) .figure__body {
-    background-color: inherit;
-  }
-
-  .figure:hover .figure__heading,
-  .figure:hover:not(.focus-visible) .figure__heading {
-    margin-top: 0;
-  }
-
-  .figure:hover .figure__description,
-  .figure:hover .figure__content,
-  .figure:hover:not(.focus-visible) .figure__description,
-  .figure:hover:not(.focus-visible) .figure__content {
-    max-height: 100%;
-    transform: scaleY(1);
-  }
-
-  .figure:hover .figure__description,
-  .figure:hover:not(.focus-visible) .figure__description {
-    margin: -4px 0 34px;
   }
 
   .logo:hover,
