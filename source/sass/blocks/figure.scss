@@ -3,7 +3,9 @@
   color: $color-default-white;
   background-color: rgba($color-sapphire, 0.89);
 
-  @include hover-focus(true) {
+  &:hover,
+  &:focus,
+  &:focus-within {
     box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
 
     .figure__body {

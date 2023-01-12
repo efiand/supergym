@@ -3,7 +3,7 @@
 		<ul class="slider__list {{ multiple ? 'slider__list--gapped' }}">
 			{% for slide in slides %}
 				<li class="slider__item {{ multiple ? 'slider__item--card' }}">
-					{% include component ~ '.twig' with slide|merge({ bemMix: 'slider__slide' }) %}
+					{% include component ~ '.twig' with slide|merge({ bemMix: 'slider__slide', tabable: true }) %}
 				</li>
 			{% endfor %}
 		</ul>

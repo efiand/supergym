@@ -1,4 +1,4 @@
-<figure class="figure {{ bemMix }}">
+<figure class="figure {{ bemMix }}" {{ tabable ? 'tabindex="0"' }}>
 	{% include 'picture.twig' with image|merge({ className: 'figure__image' }) %}
 
 	<figcaption class="figure__body">
