@@ -16,10 +16,10 @@ module.exports = {
   devtool: isDev ? 'source-map' : false,
   output: {
     filename: '[name].min.js',
-    path: path.resolve(__dirname, 'build/js'),
+    path: path.resolve(__dirname, `${isDev ? 'dev' : 'build'}/js`),
   },
   optimization: {
-    minimize: isDev ? false : true,
+    minimize: !isDev,
   },
   module: {
     rules: [
@@ -30,12 +30,8 @@ module.exports = {
         options: {
           presets: ['@babel/preset-env'],
         },
-      }
+      },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new DuplicatePackageCheckerPlugin(),
-    new CircularDependencyPlugin()
-  ],
+  plugins: [new CleanWebpackPlugin(), new DuplicatePackageCheckerPlugin(), new CircularDependencyPlugin()],
 };

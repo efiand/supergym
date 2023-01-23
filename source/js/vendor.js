@@ -1,3 +1,5 @@
-// Swiper 7.4.1
-// import './vendor/swiper';
-import './vendor/focus-visible-polyfill';
+import Swiper, {Navigation} from 'swiper';
+import './vendor/focus-visible-polyfill.js';
+
+Swiper.use(Navigation);
+window.Swiper = Swiper;

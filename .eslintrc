@@ -9,4 +9,9 @@ env:
   browser: true
   commonjs: true
 
+globals:
+  Swiper: readonly
+  YT: readonly
+  onYouTubePlayerAPIReady: writable
+
 extends: "./eslintconfig.cjs"

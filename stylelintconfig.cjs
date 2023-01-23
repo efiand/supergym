@@ -61,7 +61,7 @@ module.exports = {
     'declaration-block-trailing-semicolon': 'always',
 
     'block-closing-brace-empty-line-before': 'never',
-    'block-closing-brace-newline-after': 'always',
+    'block-closing-brace-newline-after': ['always', {ignoreAtRules: ['if']}],
     'block-closing-brace-newline-before': 'always',
     'block-closing-brace-space-after': 'always-single-line',
     'block-closing-brace-space-before': 'always-single-line',
@@ -118,6 +118,7 @@ module.exports = {
       {
         except: ['first-nested', 'blockless-after-blockless'],
         ignore: ['after-comment'],
+        ignoreAtRules: ['else'],
       },
     ],
     'at-rule-name-case': 'lower',
@@ -125,7 +126,7 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['mixin', 'define-mixin', 'include', 'content', 'rules', 'each'],
+        ignoreAtRules: ['content', 'define-mixin', 'each', 'if', 'else', 'include', 'mixin', 'rules'],
       },
     ],
     'at-rule-no-vendor-prefix': true,
@@ -158,6 +159,6 @@ module.exports = {
     'color-no-invalid-hex': true,
     'color-no-hex': null,
     'color-named': 'never',
-    'number-max-precision': 2,
+    'number-max-precision': 8,
   },
 };
