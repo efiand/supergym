@@ -2880,7 +2880,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .teaser {
-    grid-template-areas: "features label" "features heading" "btn btn";
+    grid-template-areas: ". label" "features heading" "btn btn";
     grid-template-columns: 113px 1fr;
     -moz-column-gap: 12px;
     column-gap: 12px;
@@ -2895,7 +2895,8 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .teaser__features {
-    padding-top: 75px;
+    align-self: start;
+    padding: 78px 0 30px;
   }
 
   .teaser__btn {
@@ -2914,8 +2915,8 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .teaser__features {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     -ms-grid-column: 1;
   }
 
