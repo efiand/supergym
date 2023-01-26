@@ -17,7 +17,7 @@
   }
 
   @include vp-767 {
-    grid-template-areas: "features label" "features heading" "btn btn";
+    grid-template-areas: ". label" "features heading" "btn btn";
     grid-template-columns: 113px 1fr;
     column-gap: 12px;
     padding-top: 0;
@@ -93,7 +93,8 @@
   }
 
   @include vp-767 {
-    padding-top: 75px;
+    align-self: start;
+    padding: 78px 0 30px;
   }
 }
 
