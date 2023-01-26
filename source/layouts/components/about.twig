@@ -3,11 +3,11 @@
 		{{ content }}
 	</div>
 
-	<p class="about__picture">
+	<div class="about__picture">
 		{% include 'picture.twig' with image %}
-	</p>
 
-	<div class="about__video">
-		{% include 'video.twig' with video %}
+		<div class="about__video">
+			{% include 'video.twig' with video %}
+		</div>
 	</div>
 </section>
