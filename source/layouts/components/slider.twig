@@ -1,4 +1,8 @@
 <div class="slider no-js {{ bemMix }}" data-slider {{ multiple ? 'data-multiple' }} {{ loop ? 'data-loop' }}>
+	<button class="slider__control slider__control--prev" type="button" data-prev>
+		<span class="visually-hidden">Предыдущий слайд.</span>
+	</button>
+
 	<div class="slider__body {{ shadow ? 'slider__body--shadow' }}" data-slider-body>
 		<ul class="slider__list {{ multiple ? 'slider__list--gapped' }}">
 			{% for slide in slides %}
@@ -8,10 +12,6 @@
 			{% endfor %}
 		</ul>
 	</div>
-
-	<button class="slider__control slider__control--prev" type="button" data-prev>
-		<span class="visually-hidden">Предыдущий слайд.</span>
-	</button>
 	<button class="slider__control slider__control--next" type="button" data-next>
 		<span class="visually-hidden">Следующий слайд.</span>
 	</button>
