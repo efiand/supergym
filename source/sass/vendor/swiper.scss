@@ -1,0 +1,6 @@
+// Чтобы в фокус не попадали дубликаты слайдов слева
+.swiper-slide-duplicate {
+  &:not(:not(&) ~ &) {
+    visibility: hidden;
+  }
+}

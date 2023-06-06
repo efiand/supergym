@@ -2,18 +2,6 @@ export default (sliderElement) => {
   const {loop, multiple} = sliderElement.dataset;
   const sliderBodyElement = sliderElement.querySelector('[data-slider-body]');
 
-  const observeSlide = (entry) => {
-    if (entry.isIntersecting) {
-      entry.target.style.visibility = 'visible';
-    } else {
-      entry.target.style.visibility = 'hidden';
-    }
-  };
-
-  const observer = new IntersectionObserver((entries) => entries.forEach(observeSlide), {
-    root: sliderBodyElement,
-  });
-
   const sliderOptions = {
     grabCursor: true,
     loop: typeof loop !== 'undefined',
@@ -49,8 +37,6 @@ export default (sliderElement) => {
   sliderElement.classList.remove('no-js');
 
   const swiper = new Swiper(sliderBodyElement, sliderOptions);
-
-  sliderElement.querySelectorAll('[data-swiper-slide-index]').forEach((slideElement) => observer.observe(slideElement));
 
   return swiper;
 };
