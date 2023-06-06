@@ -376,6 +376,10 @@ template {
   display: none;
 }
 
+.swiper-slide-duplicate:not(:not(.swiper-slide-duplicate) ~ .swiper-slide-duplicate) {
+  visibility: hidden;
+}
+
 @font-face {
   font-weight: 300;
   font-style: normal;
