@@ -12,8 +12,6 @@ export default () => ({
     const mobileSuffix = useMobile ? '-mobile' : tabletSuffix;
 
     return Object.assign(additions, {
-      default: `img/${filename}.jpg`,
-      default2x: `img/${filename}@2x.jpg`,
       webp: `img/${filename}.webp`,
       webp2x: `img/${filename}@2x.webp`,
       webpTablet: `img/${filename}${tabletSuffix}.webp`,

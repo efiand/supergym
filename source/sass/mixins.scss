@@ -36,37 +36,27 @@
 }
 
 @mixin background-image() {
-  @supports (background-image: var(--bg-webp)) {
-    @media (min-width: $vp-1024) {
-      background-image: var(--bg-webp);
+  @media (min-width: $vp-1024) {
+    background-image: var(--bg-webp);
 
-      @include retina {
-        background-image: var(--bg-webp2x, none);
-      }
-    }
-
-    @include vp-1199 {
-      background-image: var(--bg-webpTablet, none);
-
-      @include retina {
-        background-image: var(--bg-webpTablet2x, none);
-      }
-    }
-
-    @include vp-767 {
-      background-image: var(--bg-webpMobile, none);
-
-      @include retina {
-        background-image: var(--bg-webpMobile2x, none);
-      }
+    @include retina {
+      background-image: var(--bg-webp2x, none);
     }
   }
 
-  @supports not (background-image: var(--bg-webp, none)) {
-    background-image: var(--bg-default, none);
+  @include vp-1199 {
+    background-image: var(--bg-webpTablet, none);
 
     @include retina {
-      background-image: var(--bg-default2x, none);
+      background-image: var(--bg-webpTablet2x, none);
+    }
+  }
+
+  @include vp-767 {
+    background-image: var(--bg-webpMobile, none);
+
+    @include retina {
+      background-image: var(--bg-webpMobile2x, none);
     }
   }
 }
